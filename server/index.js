@@ -21,7 +21,8 @@ app.use(
 );
 
 //  ENDPOINTS HERE
-
+app.post('/auth/login', authCtrl.login)
+app.post('/auth/register', authCtrl.register)
 
 
 

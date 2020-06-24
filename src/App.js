@@ -11,7 +11,7 @@ function App() {
       {routes}
 
     </div>
-  );
+  )
 }
 
 export default App;
