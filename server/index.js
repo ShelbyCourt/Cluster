@@ -23,6 +23,15 @@ app.use(
 //  ENDPOINTS HERE
 app.post('/auth/login', authCtrl.login)
 app.post('/auth/register', authCtrl.register)
+app.post('/auth/logout', authCtrl.logout)
+
+app.post('/api/resources', resourceCtrl.addNewResource)
+app.get('/api/resources', resourceCtrl.getAllResources)
+app.get('/api/oneresource', resourceCtrl.getOneResource)
+app.put('/api/resources', resourceCtrl.updateResource)
+app.delete('/api/resources', resourceCtrl.deleteResource)
+
+
 
 
 

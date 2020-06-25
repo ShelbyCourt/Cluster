@@ -60,8 +60,9 @@ module.exports = {
     },
 
 
-    logout: async (req, res) => {
-        const db = req.app.get('db')
+    logout: (req, res) => {
+        req.session.destroy();
+        return res.sendStatus(200);
     }
 
     
