@@ -10,13 +10,19 @@
     width: 100vw;
 }
 
+.topnavleft {
+    margin-left: -15%;
+}
+
 .topnavleft h1 {
-    margin-left: 0;
-    align-items: center;
+    /* margin-left: 0px; */
+    /* align-items: center; */
+    /* justify-content: flex-start; */
     /* position: relative; */
     display: inline;
     padding: 10px;
     line-height: 1;
+    font-size: 25px;
     
 }
 
@@ -30,6 +36,7 @@
 
 
 .header .Name h1 {
+    margin-left: 55%;
     position: relative;    
     font-size: 70px;
     line-height: .5;

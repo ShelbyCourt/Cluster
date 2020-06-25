@@ -10,12 +10,17 @@
     margin-top: 3%;
 }
 
+/* .heartback {
+    background-image: url(../../Assets/Pers-Proj.png);
+    min-height: 380px;
+    z-index: 0;
+  } */
+
 .Auth .Login {
     margin: 10px;
     color: #7ed957;
-    font-size: 24px;
+    font-size: 20px;
     line-height: .5;
-
 }
 
 .Auth .Login p {

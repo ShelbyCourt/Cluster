@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
+import { connect } from 'react-redux';
 
 import './Header.css';
 
@@ -25,4 +26,11 @@ class Header extends Component {
   }
 }
 
-  export default Header;
+const mapStateToProps = reduxState => {
+  return {
+      username: reduxState.username,
+      profile_pic: reduxState.profile_pic
+  };
+}
+
+export default connect(mapStateToProps)(Header)
