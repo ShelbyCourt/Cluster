@@ -1,0 +1,38 @@
+
+
+.Register {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Register .RegInfo {
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: center;
+	align-content: space-around;
+    padding: 25px;
+    padding-bottom: 35px;
+    box-shadow: 10px 15px 10px -6px rgba(0,0,0,0.75);
+    background-color: ghostwhite;
+    width: 30vw;
+    margin-top: 3%;
+    margin-left: initial;
+    
+}
+
+.Register .RegInfo button {
+    margin: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: 'Elsie';
+    font-size: 20px;
+    background-color: #fdabcb;
+    color: black;
+    border-radius: 12px;
+}

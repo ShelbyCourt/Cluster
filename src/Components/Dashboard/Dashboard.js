@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
+
 import "./Dashboard.css";
 
 class Dashboard extends Component {
@@ -7,9 +9,9 @@ class Dashboard extends Component {
     return (
       <div className="Dash">
         <div className="TopDash">
-          <h1 className="Welcome">Bienvenue, {this.props.username}</h1>
+          <h1 className="Welcome">Bienvenue, {this.props.username}!</h1>
           <div className="addResource">
-            <button>Add New Resource</button>
+            <Link to="/ResourceInfo"><button>Add New Resource</button></Link> 
           </div>
         </div>
         <br />

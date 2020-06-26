@@ -1,10 +1,29 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
+import axios from 'axios';
 
 import "./Header.css";
 
 class Header extends Component {
+  constructor() {
+    super();
+    this.state = {
+      username: '',
+      password: ''
+    };
+    this.logout = this.logout.bind(this);
+  }
+
+  logout() {
+    // axios GET to /auth/logout here
+    axios.get('/auth/logout')
+    .then ( () => {      
+      this.props.updateUser({});
+    })
+    .catch(err => console.log(err));
+ }
+
   render() {
     return (
       <div className="header">
@@ -27,7 +46,7 @@ class Header extends Component {
           <Link to="/Contact">
             <h1 className="Contact">Contact</h1>
           </Link>
-          {this.props.isLoggedIn && <h1 className="Logout">Logout</h1>}
+          {this.props.isLoggedIn && <Link to="/"> <button className="Logout" type="submit" onClick={this.logout}>Logout</button></Link>}
         </div>
         <div className="Name">
           <h1>clusteringly</h1>

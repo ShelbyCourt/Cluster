@@ -1,7 +1,7 @@
 module.exports = {
     addNewResource: async (req, res) => {
         db = req.app.get('db');
-        const { userId } = req.session.user
+        const { userId } = req.query
         const { resource_url, language, category, title } = req.body
 
         // console.log(language);
@@ -13,12 +13,14 @@ module.exports = {
 
     getUserResources: async (req, res) => {
         db = req.app.get('db');
-        const { id } = req.session.user;
-        const { resource_url, title, description, category } = req.query;
+        const { user_id } = req.query;
+        const { resource_url, title, description, category } = req.body;
 
         // const userResources = await db.get_user_resources( [req.session.user.id]);
-        const userResources = await db.get_user_resources ( resource_url, title, description, category, id )
+        const userResources = await db.get_user_resources( resource_url, title, description, category, user_id )
+        console.log('userResources =' + userResources);
         return res.status(200).send(userResources);
+        
     },
 
     getOneResource: async (req, res) => {

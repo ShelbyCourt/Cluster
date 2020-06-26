@@ -4,6 +4,7 @@
     justify-content: center ;
     margin-left: 60%;
     padding: 15px;
+    padding-bottom: 25px;
     box-shadow: 10px 15px 10px -6px rgba(0,0,0,0.75);
     background-color: ghostwhite;
     width: 30vw;
@@ -17,7 +18,7 @@
   } */
 
 .Auth .Login {
-    margin: 15px;
+    margin: 10px;
     color: #38b6ff;
     font-size: 20px;
     line-height: .5;
@@ -30,6 +31,7 @@
 
 .Auth .Login button {
     margin: 10px;
+    margin-bottom: 20px;
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 10px;
@@ -44,6 +46,15 @@
 .Auth .Login button:hover {
     color: #38b6ff;
     background-color: black;
+}
+
+.Auth .Login h1 {
+    padding-bottom: 15px;
+}
+
+.Auth .Login input {
+    margin-bottom: 20px;
+    padding: 10px;
 }
 
 .Auth .Register {
