@@ -3,6 +3,7 @@ import React from 'react';
 import './App.css';
 import routes from './routes';
 import Header from './Components/Header/Header';
+import Auth from './Components/Auth/Auth';
 
 
 function App() {
@@ -11,7 +12,7 @@ function App() {
       <Header/>
         <div className="heartback">
         </div>
-        {routes}
+        {routes}        
     </div>
   )
 }

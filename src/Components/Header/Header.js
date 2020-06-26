@@ -17,6 +17,12 @@ class Header extends Component {
             <Link to="/about">
               <h1 className="About">About</h1>
             </Link>
+            <Link to="/FAQ">
+              <h1 className="FAQ">FAQ</h1>
+            </Link>
+            <Link to="/Contact">
+              <h1 className="Contact">Contact</h1>
+            </Link>
           </div>
           <div className='Name'>
             <h1>clusteringly</h1>

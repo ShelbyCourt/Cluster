@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 
-class About extends Component {
+class FAQ extends Component {
   render() {
     return (
       <div>
-        <h1>Who Are We?</h1>
+        <h1>FAQ</h1>
         <br/>
-        <p>Information HERE</p>
+        <p>Answers to come!</p>
       </div>
     )
   }
 }
 
-  export default About;
+  export default FAQ;

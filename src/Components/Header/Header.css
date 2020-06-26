@@ -4,26 +4,32 @@
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    align-content: space-around;
     background-color: black;
-    height: 25vh;
+    height: 20vh;
     width: 100vw;
 }
 
+  .site-Header > * {
+    -webkit-flex: 1 1 0;
+    -ms-flex: 1 1 0;
+    flex: 1 1 0;
+  }
+
+
 .topnavleft {
-    margin-left: -15%;
+    margin-left: 0vw;
 }
 
 .topnavleft h1 {
-    /* margin-left: 0px; */
-    /* align-items: center; */
-    /* justify-content: flex-start; */
-    /* position: relative; */
     display: inline;
     padding: 10px;
+    margin: 10px;
     line-height: 1;
     font-size: 25px;
-    
+}
+
+.topnavleft h1:hover {
+    background-color: whitesmoke;
 }
 
 .Home {
@@ -34,9 +40,16 @@
     color: #FF70A6;
 }
 
+.FAQ {
+    color: #7ed957;
+}
+
+.Contact {
+    color:#a87dff;
+}
 
 .header .Name h1 {
-    margin-left: 55%;
+    margin-left: 20vw;
     position: relative;    
     font-size: 70px;
     line-height: .5;

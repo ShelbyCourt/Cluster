@@ -8,6 +8,8 @@ import Dashboard from './Components/Dashboard/Dashboard';
 import ResourceInfo from './Components/ResourceInfo/ResourceInfo';
 import Profile from './Components/Profile/Profile';
 import About from './Components/About/About';
+import FAQ from './Components/FAQ/FAQ';
+import Contact from './Components/Contact/Contact';
 
 export default (
     <Switch>
@@ -17,5 +19,7 @@ export default (
         <Route path='/resourceinfo' component={ResourceInfo}/>
         <Route path='/profile' component={Profile}/>
         <Route path='/about' component={About}/>
+        <Route path='/FAQ' component={FAQ}/>
+        <Route path='/Contact' component={Contact}/>
     </Switch>
 )

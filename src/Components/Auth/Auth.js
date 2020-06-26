@@ -12,7 +12,8 @@ class Auth extends Component {
         username: '',
         email: '',
         password: ''
-      }   
+      }
+      this.login = this.login.bind(this);
   }
 
   changeHandler = (e) => {
@@ -62,7 +63,7 @@ class Auth extends Component {
           <br/>
             <p>Haven't signed up yet?</p>
             <Link to="/register">
-              <h1>Register</h1>
+              <h1 className="Register">Register</h1>
             </Link>
         </div>
       </div>
