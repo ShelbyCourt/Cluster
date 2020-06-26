@@ -62,7 +62,7 @@ module.exports = {
 
     logout: (req, res) => {
         req.session.destroy();
-        return res.sendStatus(200);
+        return res.status(200).send('User is logged OUT');
     }
 
     

@@ -1,26 +1,48 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import "./Dashboard.css";
 
 class Dashboard extends Component {
   render() {
     return (
-      <div>
-        <h1>Bienvenue, {this.props.username}</h1>
-          <br/>
-        <div className='addResource'>
-            <p>Add a new resource here</p>
+      <div className="Dash">
+        <div className="TopDash">
+          <h1 className="Welcome">Bienvenue, {this.props.username}</h1>
+          <div className="addResource">
+            <button>Add New Resource</button>
+          </div>
+        </div>
+        <br />
+        <div className="ResourceList">
+          <div className="Vocabulary">
+            <h2>Vocabulary</h2>
+          </div>
+          <div className="Verbs">
+            <h2>Verbs</h2>
+          </div>
+          <div className="Adjectives">
+            <h2>Adjectives</h2>
+          </div>
+          <div className="Adverbs">
+            <h2>Adverbs</h2>
+          </div>
+          <div className="Podcasts and Videos">
+            <h2>Podcasts and Videos</h2>
+          </div>
+          <div className="Misc.">
+            <h2>Miscellaneous</h2>
+          </div>
         </div>
       </div>
-    )
+    );
   }
 }
 
-const mapStateToProps = reduxState => {
+const mapStateToProps = (reduxState) => {
   return {
-      username: reduxState.username,
-      profile_pic: reduxState.profile_pic
+    username: reduxState.username,
+    profile_pic: reduxState.profile_pic,
   };
-}
+};
 
-export default connect(mapStateToProps)(Dashboard)
-  
+export default connect(mapStateToProps)(Dashboard);

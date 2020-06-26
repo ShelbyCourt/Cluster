@@ -1,0 +1,37 @@
+.Dash .Welcome {
+    font-weight: 600;
+    flex-direction: column;
+}
+
+.TopDash {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.Dash .addResource button {
+    margin: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: 'Elsie';
+    font-size: 20px;
+    background-color: #9dd7f8;
+    color: black;
+    border-radius: 12px;
+}
+
+.Dash .ResourceList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: space-between;
+}
+
+.Dash .ResourceList .Vocabulary {
+    flex-direction: row;
+}

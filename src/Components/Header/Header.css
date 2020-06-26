@@ -29,10 +29,15 @@
 }
 
 .topnavleft h1:hover {
-    background-color: whitesmoke;
+    background-color: rgb(54, 54, 54);
+    border-radius: 20px;
 }
 
 .Home {
+    color: #38b6ff;
+}
+
+.Dashboard {
     color: #38b6ff;
 }
 
@@ -46,6 +51,10 @@
 
 .Contact {
     color:#a87dff;
+}
+
+.Logout {
+    color: white;
 }
 
 .header .Name h1 {

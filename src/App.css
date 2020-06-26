@@ -20,17 +20,21 @@ p {
   flex: 1 1 0;
 } */
 
-
-
 body {
   /* display: flex;
   flex-direction: row; */
   background-image: linear-gradient(0.25turn, #FF70A6, #38b6ff);
+  
   background-repeat: no-repeat;
   height: 100vh;
 }
 
 h1 {
+  font-family: 'Elsie', cursive;
+  font-weight: 200;
+}
+
+h2 {
   font-family: 'Elsie', cursive;
   font-weight: 200;
 }

@@ -13,10 +13,11 @@ module.exports = {
 
     getUserResources: async (req, res) => {
         db = req.app.get('db');
-        // const { userId } = req.session.user
-        // const { resource_url, title, description, category } = req.body
+        const { id } = req.session.user;
+        const { resource_url, title, description, category } = req.query;
 
-        const userResources = await db.get_user_resources( [req.session.user.id]);
+        // const userResources = await db.get_user_resources( [req.session.user.id]);
+        const userResources = await db.get_user_resources ( resource_url, title, description, category, id )
         return res.status(200).send(userResources);
     },
 
@@ -30,6 +31,11 @@ module.exports = {
 
     updateResource: async (req, res) => {
         db = req.app.get('db');
+        const { title, resource_url, description, notes, category } = req.body
+        const { resourceId } = req.query
+
+        const updatedResource = await db.update_resource( title, resource_url, description, notes, category, resourceId )
+        return res.status(200).send(updatedResource);        
     },
 
     deleteResource: async (req, res) => {
