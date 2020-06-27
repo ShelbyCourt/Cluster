@@ -26,7 +26,8 @@ export function updateUser (id, username, email) {
 export function logoutUser () {
     return {
         type: LOGOUT_USER,
-        payload: initialState
+        payload: initialState,
+        isLoggedIn: false
     }
 }
 
@@ -42,9 +43,15 @@ export function getUser () {
 export default function reducer (state = initialState, action){
     switch (action.type) {
         case UPDATE_USER:
-            return {...state, username: action.payload.username, id: action.payload.id, profile_pic: action.payload.profile_pic}
+            return {...state, username: action.payload.username, id: action.payload.id, profile_pic: action.payload.profile_pic, isLoggedIn: true}
+        // case UPDATE_USER + '_PENDING':
+        //     return state
+        // case UPDATE_USER + '_FULFILLED':
+        //     return {...state, username: action.payload.username, id: action.payload.id, profile_pic: action.payload.profile_pic, isLoggedIn: true}
+        // case UPDATE_USER + '_REJECTED':
+        //     return initialState 
         case LOGOUT_USER:
-            return {...state ,...action.payload}
+            return {...state ,...action.payload, isLoggedIn: false}
         case GET_USER + '_PENDING':
             return state
         case GET_USER + '_FULFILLED':

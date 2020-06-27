@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
+import { logoutUser } from "../../Redux/userReducer";
 import axios from 'axios';
 
 import "./Header.css";
@@ -19,7 +20,7 @@ class Header extends Component {
     // axios GET to /auth/logout here
     axios.get('/auth/logout')
     .then ( () => {      
-      this.props.updateUser({});
+      this.props.logoutUser({});
     })
     .catch(err => console.log(err));
  }
@@ -64,4 +65,6 @@ const mapStateToProps = (reduxState) => {
   };
 };
 
-export default connect(mapStateToProps)(Header);
+const mapDispatchToProps = { logoutUser: logoutUser }
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header)
