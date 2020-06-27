@@ -8,10 +8,11 @@ class ResourceInfo extends Component {
     super ();
     this.state = {
       title: '',
-      resourceUrl: '',
+      resource_url: '',
       description: '',
       notes: '',
-      category: ''
+      category: '',
+      language: ''
     };
   }
 
@@ -23,22 +24,23 @@ class ResourceInfo extends Component {
 
   addResource = (e) => {
     e.preventDefault();
-    const { title, resourceUrl, description, notes, category } = this.state;
-    axios.post('/api/resources', {title, resourceUrl, description, notes, category})
+    const { title, resource_url, description, notes, category, language } = this.state;
+    axios.post('/api/resources', {title, resource_url, description, notes, category, language})
     .then((res => {
       this.props.updateResource(
         res.data.title,
-        res.data.resourceUrl,
+        res.data.resource_url,
         res.data.description,
         res.data.notes,
         res.data.category,
+        res.data.language,
         res.data.resourceId
       )
     }))
   }
 
   render() {
-    const { title, resourceUrl, description, notes, category } = this.state;
+    const { title, resource_url, description, notes, category, language } = this.state;
     return (
       <div>
         <h1>Resource Info - You Can Input & Edit From Here</h1>
@@ -56,8 +58,8 @@ class ResourceInfo extends Component {
           <input
             type="text"
             placeholder="Resource url..."
-            name="resourceUrl"
-            value={resourceUrl}
+            name="resource_url"
+            value={resource_url}
             onChange={(e) => this.changeHandler(e)}
           />
           <br />
@@ -85,6 +87,15 @@ class ResourceInfo extends Component {
             placeholder="Category..."
             name="category"
             value={category}
+            onChange={(e) => this.changeHandler(e)}
+          />
+          <br />
+          <p>Language: </p>
+          <input
+            type="text"
+            placeholder="Language..."
+            name="language"
+            value={language}
             onChange={(e) => this.changeHandler(e)}
           />
           <br />

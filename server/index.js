@@ -31,7 +31,7 @@ app.get('/api/oneresource', resourceCtrl.getOneResource)
 app.put('/api/resources', resourceCtrl.updateResource)
 app.delete('/api/resources', resourceCtrl.deleteResource)
 
-// app.put('/api/users', userCtrl.updateUser)
+app.get('/api/user', userCtrl.getUser)
 
 
 

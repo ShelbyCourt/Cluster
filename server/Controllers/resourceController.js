@@ -1,12 +1,12 @@
 module.exports = {
     addNewResource: async (req, res) => {
         db = req.app.get('db');
-        const { userId } = req.query
-        const { resource_url, language, category, title } = req.body
-
+        const { title, resource_url, description, notes, category, language } = req.body
+        const { user_id } = req.session.user;
+        console.log('user id = ' + user_id)
         // console.log(language);
 
-        const newResource = await db.add_new_resource(resource_url, language, category, title, userId);
+        const newResource = await db.add_new_resource(title, resource_url, description, notes, category, language, user_id);
         console.log(language);
         return res.status(200).send(newResource);
     },
@@ -15,6 +15,7 @@ module.exports = {
         db = req.app.get('db');
         const { user_id } = req.query;
         const { resource_url, title, description, category } = req.body;
+        console.log('category = ' + category)
 
         // const userResources = await db.get_user_resources( [req.session.user.id]);
         const userResources = await db.get_user_resources( resource_url, title, description, category, user_id )

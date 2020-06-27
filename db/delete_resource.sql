@@ -1,2 +1,2 @@
 delete from resources
-where resource_id = $1;
+where id = $1;
