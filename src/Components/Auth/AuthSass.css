@@ -4,16 +4,16 @@
   display: flex;
   /* flex-direction: column; */
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-left: 60%;
+  -ms-flex-pack: center;
+  justify-content: center;
   padding: 15px;
   padding-bottom: 25px;
   -webkit-box-shadow: 10px 15px 10px -6px rgba(0, 0, 0, 0.75);
-          box-shadow: 10px 15px 10px -6px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 15px 10px -6px rgba(0, 0, 0, 0.75);
   background-color: ghostwhite;
   width: 30vw;
   margin-top: 3%;
+  margin-left: 60%;
 }
 
 .Auth .Login {
@@ -36,10 +36,11 @@
   padding-top: 10px;
   padding-bottom: 10px;
   font-family: 'Elsie';
-  font-size: 20px;
+  font-size: 25px;
   border-radius: 12px;
   background-color: #9dd7f8;
   color: black;
+  font-weight: 600;
 }
 
 .Auth button:hover {
@@ -64,17 +65,28 @@
   padding-top: 10px;
   padding-bottom: 10px;
   font-family: 'Elsie';
-  font-size: 20px;
+  font-size: 25px;
   border-radius: 12px;
   color: #FF70A6;
   background: white;
+  font-size: 40px;
+  line-height: 1.2;
 }
 
 .Auth .Register:hover {
+  margin: 10px;
+  margin-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: 'Elsie';
+  font-size: 25px;
+  border-radius: 12px;
   color: ghostwhite;
   background-color: #FF70A6;
-  height: 50px;
   line-height: 1.2;
+  font-size: 40px;
 }
 
 /* .heartback {
@@ -82,4 +94,4 @@
     min-height: 380px;
     z-index: 0;
   } */
-/*# sourceMappingURL=Auth.css.map */
+/*# sourceMappingURL=AuthSass.css.map */

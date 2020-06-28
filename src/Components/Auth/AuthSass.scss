@@ -1,0 +1,58 @@
+@import "../../variables.scss";
+
+.Auth {
+    @include mainBox;
+    margin-left: 60%;    
+    .Login {
+        margin: 10px;
+        color: $bluePrimary;
+        font-size: 20px;
+                line-height: .5;
+    }
+        p {
+            font-family: 'Raleway', sans-serif;
+            font-size: 18px;
+        }
+        button {
+            @include mainBtn;
+            background-color: #9dd7f8;
+            color: black;
+            font-weight: 600;
+        }
+        button:hover {
+            color: $bluePrimary;
+            background-color: black;
+        }
+        
+        h1 {
+            padding-bottom: 15px;
+        }
+        
+        input {
+            margin-bottom: 20px;
+            padding: 10px;
+        }
+        
+    .Register {
+        @include mainBtn;
+        color: $pinkPrimary;  
+        background: white;
+        font-size: 40px;
+        line-height: 1.2;
+    }
+        
+    .Register:hover {
+        @include mainBtn;
+        color: ghostwhite ;
+        background-color: $pinkPrimary;
+        // height: 50px;
+        line-height: 1.2;
+        font-size: 40px;
+        }
+}
+
+/* .heartback {
+    background-image: url(../../Assets/Pers-Proj.png);
+    min-height: 380px;
+    z-index: 0;
+  } */

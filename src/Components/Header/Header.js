@@ -4,7 +4,8 @@ import { connect } from "react-redux";
 import { logoutUser } from "../../Redux/userReducer";
 import axios from 'axios';
 
-import "./Header.css";
+// import "./Header.css";
+import "./HeaderSass.css";
 
 class Header extends Component {
   constructor() {

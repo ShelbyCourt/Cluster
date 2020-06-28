@@ -3,7 +3,8 @@ import axios from 'axios';
 import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
 import { updateUser } from '../../Redux/userReducer';
-import './Auth.css';
+// import './Auth.css';
+import "./AuthSass.css";
 
 class Auth extends Component {
   constructor (){

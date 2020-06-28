@@ -1,0 +1,90 @@
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: black;
+  height: 20vh;
+  width: 100vw;
+}
+
+.header .Name h1 {
+  margin-left: 20vw;
+  position: relative;
+  font-size: 70px;
+  line-height: .5;
+  color: #a87dff;
+}
+
+.site-Header > * {
+  -ms-flex: 1 1 0;
+  -webkit-box-flex: 1;
+          flex: 1 1 0;
+}
+
+.topnavleft {
+  margin-left: 0vw;
+}
+
+.topnavleft h1 {
+  display: inline;
+  padding: 10px;
+  margin: 10px;
+  line-height: 1;
+  font-size: 25px;
+}
+
+.topnavleft h1:hover {
+  background-color: #363636;
+  border-radius: 20px;
+}
+
+.Home {
+  color: #38b6ff;
+}
+
+.Dashboard {
+  color: #38b6ff;
+}
+
+.About {
+  color: #FF70A6;
+}
+
+.FAQ {
+  color: #7ed957;
+}
+
+.Contact {
+  color: #a87dff;
+}
+
+.Logout {
+  color: white;
+  background-color: black;
+  border: none;
+  border-radius: 20px;
+  font-family: 'Elsie', cursive;
+  font-weight: 200;
+  padding: 10px;
+  margin: 10px;
+  line-height: 1;
+  font-size: 25px;
+}
+
+.topnavleft .Logout:hover {
+  background-color: #363636;
+  border-radius: 20px;
+  color: #38b6ff;
+}
+/*# sourceMappingURL=HeaderSass.css.map */

@@ -1,0 +1,25 @@
+@import "../../variables.scss";
+
+.Register {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    @include mainBox;
+    h1 {
+        color: $pinkPrimary;
+    }
+    .RegInfo {
+        justify-content: center;
+        margin-top: 3%;
+        // margin-left: initial;
+        color: $bluePrimary;
+    }
+        button {
+            @include mainBtn;
+            background-color: #fdabcb;
+            color: black;            
+        }
+
+
+}

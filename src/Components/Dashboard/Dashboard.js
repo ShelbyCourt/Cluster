@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 
-import "./Dashboard.css";
+// import "./Dashboard.css";
+import "./DashboardSass.css";
 
 class Dashboard extends Component {
   render() {

@@ -1,0 +1,53 @@
+.Register {
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* flex-direction: column; */
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 15px;
+  padding-bottom: 25px;
+  -webkit-box-shadow: 10px 15px 10px -6px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 15px 10px -6px rgba(0, 0, 0, 0.75);
+  background-color: ghostwhite;
+  width: 30vw;
+  margin-top: 3%;
+}
+
+.Register h1 {
+  color: #FF70A6;
+}
+
+.Register .RegInfo {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 3%;
+  color: #38b6ff;
+}
+
+.Register button {
+  margin: 10px;
+  margin-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: 'Elsie';
+  font-size: 25px;
+  border-radius: 12px;
+  background-color: #fdabcb;
+  color: black;
+}
+/*# sourceMappingURL=RegisterSass.css.map */

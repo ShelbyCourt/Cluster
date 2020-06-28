@@ -1,0 +1,32 @@
+@import "../../variables.scss";
+
+.Dash  {
+
+    flex-direction: column;
+    .TopDash {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+        .Welcome {
+            font-weight: 600;
+        }
+    .addResource button {
+        @include mainBtn;
+        background-color: #9dd7f8;
+        color: black;    
+    }
+    .ResourceList {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        align-content: space-between;
+        .ResourceList .Vocabulary {
+            flex-direction: row;
+        }
+    }
+}
+

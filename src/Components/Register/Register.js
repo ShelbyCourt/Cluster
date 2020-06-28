@@ -3,7 +3,8 @@ import axios from "axios";
 import { updateUser } from '../../Redux/userReducer';
 import {connect} from 'react-redux';
 
-import "./Register.css";
+// import "./Register.css";
+import "./RegisterSass.css";
 
 class Register extends Component {
   constructor() {
