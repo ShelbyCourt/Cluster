@@ -3,16 +3,18 @@ import axios from "axios";
 import { updateResource } from "../../Redux/resourceReducer";
 import { connect } from "react-redux";
 
+import "./ResourceInfo.css";
+
 class ResourceInfo extends Component {
-  constructor () {
-    super ();
+  constructor() {
+    super();
     this.state = {
-      title: '',
-      resource_url: '',
-      description: '',
-      notes: '',
-      category: '',
-      language: ''
+      title: "",
+      resource_url: "",
+      description: "",
+      notes: "",
+      category: "",
+      language: "",
     };
   }
 
@@ -24,27 +26,49 @@ class ResourceInfo extends Component {
 
   addResource = (e) => {
     e.preventDefault();
-    const { title, resource_url, description, notes, category, language } = this.state;
-    axios.post('/api/resources', {title, resource_url, description, notes, category, language})
-    .then((res => {
-      this.props.updateResource(
-        res.data.title,
-        res.data.resource_url,
-        res.data.description,
-        res.data.notes,
-        res.data.category,
-        res.data.language,
-        res.data.resourceId
-      )
-    }))
-  }
+    const {
+      title,
+      resource_url,
+      description,
+      notes,
+      category,
+      language,
+    } = this.state;
+    axios
+      .post("/api/resources", {
+        title,
+        resource_url,
+        description,
+        notes,
+        category,
+        language,
+      })
+      .then((res) => {
+        this.props.updateResource(
+          res.data.title,
+          res.data.resource_url,
+          res.data.description,
+          res.data.notes,
+          res.data.category,
+          res.data.language,
+          res.data.resourceId
+        );
+      });
+  };
 
   render() {
-    const { title, resource_url, description, notes, category, language } = this.state;
+    const {
+      title,
+      resource_url,
+      description,
+      notes,
+      category,
+      language,
+    } = this.state;
     return (
-      <div>
-        <h1>Resource Info - You Can Input & Edit From Here</h1>
+      <div className="container">
         <div className="RegInfo">
+          <h1>Resource Information</h1>
           <p>Title: </p>
           <input
             type="text"
@@ -99,14 +123,16 @@ class ResourceInfo extends Component {
             onChange={(e) => this.changeHandler(e)}
           />
           <br />
-          <button onClick={this.deleteResource}>DELETE</button>
-          <button onClick={this.addResource}>SAVE</button>
+          <div className="bottomBtns">
+            <button onClick={this.deleteResource}>DELETE</button>
+            <button onClick={this.addResource}>SAVE</button>
+          </div>
         </div>
       </div>
     );
   }
 }
 
-const mapDispatchToProps = { updateResource: updateResource }
+const mapDispatchToProps = { updateResource: updateResource };
 
-export default connect(null, mapDispatchToProps)(ResourceInfo)
+export default connect(null, mapDispatchToProps)(ResourceInfo);

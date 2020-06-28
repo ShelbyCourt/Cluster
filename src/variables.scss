@@ -2,20 +2,8 @@ $bluePrimary: #38b6ff;
 $pinkPrimary: #FF70A6;
 $greenPrimary: #7ed957;
 $purplePrimary: #a87dff;
-
-
-@mixin mainBtn {
-    margin: 10px;
-    margin-bottom: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    font-family: 'Elsie';
-    font-size: 25px;
-    border-radius: 12px;
-        
-}
+$blueSecond: #9dd7f8;
+$pinkSecond: #fdabcb;
 
 @mixin mainBox {
     display: -webkit-box;
@@ -32,4 +20,17 @@ $purplePrimary: #a87dff;
     background-color: ghostwhite;
     width: 30vw;
     margin-top: 3%;
+}
+
+@mixin mainBtn {
+    margin: 10px;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: 'Elsie';
+    font-size: 25px;
+    border-radius: 12px;
+        
 }

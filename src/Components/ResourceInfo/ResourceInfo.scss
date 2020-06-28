@@ -1,0 +1,32 @@
+@import "../../variables.scss";
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    line-height: .2;
+    .RegInfo {
+        flex-direction: column;
+        @include mainBox;  
+        background-color: $blueSecond;      
+        width: 50vw;
+        input {
+            justify-content: center;
+            margin: 10px;
+            line-height: 1;
+        }
+        .bottomBtns button {
+            flex-direction: row;
+            justify-content: space-around;
+            @include mainBtn;
+            // margin: 25px;
+            margin-right: 80px;
+            margin-left: 80px;
+            &:hover {
+                color: $bluePrimary;
+                background-color: black;
+                font-weight: 600;
+            }
+        }
+    }
+}

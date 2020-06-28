@@ -30,7 +30,7 @@
 
 .Auth button {
   margin: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 10px;
@@ -59,7 +59,7 @@
 
 .Auth .Register {
   margin: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 10px;
@@ -71,11 +71,12 @@
   background: white;
   font-size: 40px;
   line-height: 1.2;
+  width: 15vw;
 }
 
 .Auth .Register:hover {
   margin: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 10px;
