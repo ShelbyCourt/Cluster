@@ -10,6 +10,7 @@ import Profile from './Components/Profile/Profile';
 import About from './Components/About/About';
 import FAQ from './Components/FAQ/FAQ';
 import Contact from './Components/Contact/Contact';
+import AddResource from './Components/AddResource/AddResource';
 
 export default (
     <Switch>
@@ -21,5 +22,6 @@ export default (
         <Route path='/about' component={About}/>
         <Route path='/FAQ' component={FAQ}/>
         <Route path='/Contact' component={Contact}/>
+        <Route path='/AddResource' component={AddResource}/>
     </Switch>
 )

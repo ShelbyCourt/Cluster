@@ -24,7 +24,7 @@
 }
 
 .Auth p {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway";
   font-size: 18px;
 }
 
@@ -35,7 +35,7 @@
   padding-right: 20px;
   padding-top: 10px;
   padding-bottom: 10px;
-  font-family: 'Elsie';
+  font-family: "Elsie";
   font-size: 25px;
   border-radius: 12px;
   background-color: #9dd7f8;
@@ -64,14 +64,16 @@
   padding-right: 20px;
   padding-top: 10px;
   padding-bottom: 10px;
-  font-family: 'Elsie';
+  font-family: "Elsie";
   font-size: 25px;
   border-radius: 12px;
   color: #FF70A6;
   background: white;
-  font-size: 40px;
+  font-size: 30px;
   line-height: 1.2;
-  width: 15vw;
+  width: 10vw;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .Auth .Register:hover {
@@ -81,13 +83,13 @@
   padding-right: 20px;
   padding-top: 10px;
   padding-bottom: 10px;
-  font-family: 'Elsie';
+  font-family: "Elsie";
   font-size: 25px;
   border-radius: 12px;
   color: ghostwhite;
   background-color: #FF70A6;
   line-height: 1.2;
-  font-size: 40px;
+  font-size: 35px;
 }
 
 /* .heartback {

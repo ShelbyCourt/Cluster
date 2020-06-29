@@ -5,6 +5,9 @@ $purplePrimary: #a87dff;
 $blueSecond: #9dd7f8;
 $pinkSecond: #fdabcb;
 
+$MainFont: 'Elsie';
+$SecFont: 'Raleway';
+
 @mixin mainBox {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -29,8 +32,21 @@ $pinkSecond: #fdabcb;
     padding-right: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
-    font-family: 'Elsie';
+    font-family: $MainFont;
     font-size: 25px;
+    border-radius: 12px;
+        
+}
+
+@mixin smallBtn {
+    margin: 5px;
+    margin-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: $MainFont;
+    font-size: 18px;
     border-radius: 12px;
         
 }

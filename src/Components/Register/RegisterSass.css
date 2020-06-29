@@ -40,7 +40,7 @@
       -ms-flex-pack: center;
           justify-content: center;
   margin-top: 3%;
-  color: #38b6ff;
+  color: #FF70A6;
 }
 
 .Register button {
@@ -50,7 +50,7 @@
   padding-right: 20px;
   padding-top: 10px;
   padding-bottom: 10px;
-  font-family: 'Elsie';
+  font-family: "Elsie";
   font-size: 25px;
   border-radius: 12px;
   background-color: #fdabcb;

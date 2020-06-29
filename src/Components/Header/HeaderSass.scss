@@ -65,7 +65,7 @@
     background-color: rgb(0, 0, 0);
     border: none;
     border-radius: 20px;
-    font-family: 'Elsie', cursive;
+    font-family: $MainFont;
     font-weight: 200;
     padding: 10px;
     margin: 10px;
@@ -76,5 +76,5 @@
 .topnavleft .Logout:hover {
     background-color: rgb(54, 54, 54);
     border-radius: 20px;
-    color: #38b6ff;
+    color: $bluePrimary;
 }

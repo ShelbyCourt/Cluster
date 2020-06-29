@@ -1,0 +1,98 @@
+.containerR {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+  line-height: .2;
+  color: #a87dff;
+}
+
+.containerR .Resource {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: ghostwhite;
+  margin: 15px;
+  padding: 15px;
+  width: 50vw;
+  padding-bottom: 25px;
+  -webkit-box-shadow: 10px 15px 10px -6px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 15px 10px -6px rgba(0, 0, 0, 0.75);
+}
+
+.containerR .Resource .AddResourceInput {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+}
+
+.containerR .Resource .Field {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.containerR .Resource input {
+  margin: 10px;
+  line-height: 1;
+}
+
+.containerR .Resource .bottomBtns button {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 5px;
+  margin-bottom: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-family: 'Elsie';
+  font-size: 20px;
+  border-radius: 12px;
+  margin-right: 80px;
+  margin-left: 80px;
+}
+
+.containerR .Resource .bottomBtns button:hover {
+  color: #a87dff;
+  background-color: black;
+  font-weight: 600;
+}
+/*# sourceMappingURL=AddResourceSass.css.map */

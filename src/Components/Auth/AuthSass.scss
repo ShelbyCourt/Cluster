@@ -10,7 +10,7 @@
                 line-height: .5;
     }
         p {
-            font-family: 'Raleway', sans-serif;
+            font-family: $SecFont;
             font-size: 18px;
         }
         button {
@@ -37,9 +37,10 @@
         @include mainBtn;
         color: $pinkPrimary;  
         background: white;
-        font-size: 40px;
+        font-size: 30px;
         line-height: 1.2;
-        width: 15vw;
+        width: 10vw;
+        box-shadow: none;
     }
         
     .Register:hover {
@@ -48,8 +49,8 @@
         background-color: $pinkPrimary;
         // height: 50px;
         line-height: 1.2;
-        font-size: 40px;
-        }
+        font-size: 35px;
+    }
 }
 
 /* .heartback {
