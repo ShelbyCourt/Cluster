@@ -12,7 +12,7 @@
     .Name h1 {
         margin-left: 20vw;
         position: relative;    
-        font-size: 70px;
+        font-size: 50px;
         line-height: .5;
         color: $purplePrimary;
     }
@@ -24,15 +24,14 @@
     flex: 1 1 0;
   }
 
-
 .topnavleft {
     margin-left: 0vw;
     h1 {
         display: inline;
         padding: 10px;
-        margin: 10px;
+        margin: 5px;
         line-height: 1;
-        font-size: 25px;
+        font-size: 22px;
     }
     h1:hover {
         background-color: rgb(54, 54, 54);
@@ -68,9 +67,9 @@
     font-family: $MainFont;
     font-weight: 200;
     padding: 10px;
-    margin: 10px;
+    margin: 5px;
     line-height: 1;
-    font-size: 25px;
+    font-size: 22px;
 }
 
 .topnavleft .Logout:hover {

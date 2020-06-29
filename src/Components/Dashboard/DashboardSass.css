@@ -20,8 +20,18 @@
           align-items: center;
 }
 
-.Dash .Welcome {
+.Dash .Welcome h1 {
   font-weight: 600;
+  line-height: 1;
+}
+
+.Dash .Welcome p {
+  font-size: 1px;
+  line-height: .2;
+}
+
+.Dash .Welcome p:hover {
+  color: ghostwhite;
 }
 
 .Dash .addResource button {
@@ -31,11 +41,17 @@
   padding-right: 20px;
   padding-top: 10px;
   padding-bottom: 10px;
-  font-family: 'Elsie';
+  font-family: "Cinzel", serif;
   font-size: 25px;
   border-radius: 12px;
-  background-color: #9dd7f8;
+  background-color: #aba6fd;
   color: black;
+}
+
+.Dash .addResource button:hover {
+  color: #a87dff;
+  background-color: black;
+  font-weight: 600;
 }
 
 .Dash .ResourceList {

@@ -10,12 +10,27 @@
         align-items: center;
     }
         .Welcome {
-            font-weight: 600;
+            h1 {
+                font-weight: 600;
+                line-height: 1;
+            }
+            p{
+                font-size: 1px;
+                line-height: .2;
+                &:hover {                   
+                    color: ghostwhite;                    
+                }
+            }
         }
     .addResource button {
         @include mainBtn;
-        background-color: #9dd7f8;
-        color: black;    
+        background-color: $purpleSecond;
+        color: black;
+        &:hover {
+            color: $purplePrimary;
+            background-color: black;
+            font-weight: 600;
+        }    
     }
     .ResourceList {
         display: flex;

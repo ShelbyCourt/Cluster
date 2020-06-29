@@ -13,7 +13,7 @@ module.exports = {
 
     getUserResources: async (req, res) => {
         db = req.app.get('db');
-        const { user_id } = req.query;
+        const { user_id } = req.session.user;
         const { resource_url, title, description, category } = req.body;
         console.log('category = ' + category)
 
@@ -34,11 +34,21 @@ module.exports = {
 
     updateResource: async (req, res) => {
         db = req.app.get('db');
-        const { title, resource_url, description, notes, category } = req.body
-        const { resourceId } = req.query
+        const { title, resource_url, description, notes, category } = req.body;
+        const { resourceId } = req.query;
 
         const updatedResource = await db.update_resource( title, resource_url, description, notes, category, resourceId )
         return res.status(200).send(updatedResource);        
+    },
+
+    getResourceCategory: async (req, res) => {
+        db = req.app.get('db');
+        const { user_id } = req.session.user;
+        const { category } = req.query;
+
+        const catResources = await db.get_resource_category([user_id, category])
+        console.log(catResources);
+        return res.status(200).send(catResources);
     },
 
     deleteResource: async (req, res) => {

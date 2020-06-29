@@ -28,6 +28,7 @@ app.post('/auth/logout', authCtrl.logout)
 app.post('/api/resources', resourceCtrl.addNewResource)
 app.get('/api/resources', resourceCtrl.getUserResources)
 app.get('/api/oneresource', resourceCtrl.getOneResource)
+app.get('/api/resourcesbycat', resourceCtrl.getResourceCategory)
 app.put('/api/resources', resourceCtrl.updateResource)
 app.delete('/api/resources', resourceCtrl.deleteResource)
 

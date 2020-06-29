@@ -6,13 +6,17 @@ import { Link } from "react-router-dom";
 import "./DashboardSass.css";
 
 class Dashboard extends Component {
+  
   render() {
     return (
       <div className="Dash">
         <div className="TopDash">
-          <h1 className="Welcome">Bienvenue, {this.props.username}!</h1>
+          <div className="Welcome">
+          <h1>Bienvenue, {this.props.username}!</h1>
+          <Link to="/profile"><p>VIEW PROFILE</p></Link>
+          </div>
           <div className="addResource">
-            <Link to="/ResourceInfo"><button>Add New Resource</button></Link> 
+            <Link to="/AddResource"><button>Add New Resource</button></Link> 
           </div>
         </div>
         <br />

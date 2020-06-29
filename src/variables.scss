@@ -4,8 +4,9 @@ $greenPrimary: #7ed957;
 $purplePrimary: #a87dff;
 $blueSecond: #9dd7f8;
 $pinkSecond: #fdabcb;
+$purpleSecond: #aba6fd;
 
-$MainFont: 'Elsie';
+$MainFont: 'Cinzel', serif;
 $SecFont: 'Raleway';
 
 @mixin mainBox {
@@ -47,6 +48,6 @@ $SecFont: 'Raleway';
     padding-bottom: 5px;
     font-family: $MainFont;
     font-size: 18px;
-    border-radius: 12px;
+    border-radius: 14px;
         
 }
