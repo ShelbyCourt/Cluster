@@ -26,8 +26,8 @@
 }
 
 .Dash .Welcome p {
-  font-size: 1px;
-  line-height: .2;
+  font-size: 18px;
+  line-height: 1;
 }
 
 .Dash .Welcome p:hover {
@@ -41,7 +41,7 @@
   padding-right: 20px;
   padding-top: 10px;
   padding-bottom: 10px;
-  font-family: "Cinzel", serif;
+  font-family: 'Cinzel', serif;
   font-size: 25px;
   border-radius: 12px;
   background-color: #aba6fd;

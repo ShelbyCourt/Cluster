@@ -9,9 +9,10 @@
     background-color: black;
     height: 20vh;
     width: 100vw;
+    overflow: hidden;
     .Name h1 {
-        margin-left: 20vw;
-        position: relative;    
+        // margin-left: 5vw;
+        // position: relative;    
         font-size: 50px;
         line-height: .5;
         color: $purplePrimary;
@@ -76,4 +77,58 @@
     background-color: rgb(54, 54, 54);
     border-radius: 20px;
     color: $bluePrimary;
+}
+
+@media screen and (max-width: 1050px) {
+    .header {
+        display: inline;
+        padding-bottom: 5vh;
+        .Name h1 {
+            flex-direction: row;
+            align-items: center;
+            margin-right: 0 auto;
+            z-index: 1;
+            font-size: 40px;
+        }
+        .topnavleft {
+            margin-top: 5vh;
+            padding-top: 5vh;
+            h1 {
+                margin: 1vw;
+                font-size: 22px;
+                // .Logout {
+                //     position: fixed;
+                //     float: right;
+                //     margin: 1vw;
+                //     font-size: 22px; 
+                // }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .header {
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-bottom: 5vh;
+        .Name h1 {
+            // flex-direction: column;
+            z-index: 1;
+            font-size: 30px;
+        }
+        .topnavleft {
+            margin-top: 5vh;
+            padding-top: 5vh;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            h1 {
+                margin: 1vw;
+                font-size: 16px;
+            }
+        }
+    }
 }

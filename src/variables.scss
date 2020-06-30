@@ -27,13 +27,14 @@ $SecFont: 'Raleway';
 }
 
 @mixin mainBtn {
+    // width: 5vw;
     margin: 10px;
     margin-bottom: 10px;
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
-    font-family: $MainFont;
+    font-family: 'Cinzel', serif;
     font-size: 25px;
     border-radius: 12px;
         
@@ -46,7 +47,7 @@ $SecFont: 'Raleway';
     padding-right: 15px;
     padding-top: 5px;
     padding-bottom: 5px;
-    font-family: $MainFont;
+    font-family: 'Cinzel', serif;
     font-size: 18px;
     border-radius: 14px;
         

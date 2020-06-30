@@ -17,10 +17,11 @@
             @include mainBtn;
             background-color: #9dd7f8;
             color: black;
-            font-weight: 600;
+
         }
         button:hover {
             color: $bluePrimary;
+            font-weight: 600;
             background-color: black;
         }
         
@@ -37,9 +38,9 @@
         @include mainBtn;
         color: $pinkPrimary;  
         background: white;
-        font-size: 30px;
+        font-size: 32px;
         line-height: 1.2;
-        width: 10vw;
+        width: 12vw;
         box-shadow: none;
     }
         
@@ -49,7 +50,7 @@
         background-color: $pinkPrimary;
         // height: 50px;
         line-height: 1.2;
-        font-size: 35px;
+        font-size: 32px;
     }
 }
 

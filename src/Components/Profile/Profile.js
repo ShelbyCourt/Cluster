@@ -25,15 +25,6 @@ class Profile extends Component {
         <div className="containerP">
           <h1>Username</h1>
           <p>doiejf</p>
-          {/* <div className="updateProfBtn"> */}
-            <button onClick={this.addResource}>UPDATE</button>
-          {/* </div> */}
-        </div>
-        <div className="ProfInfo">
-          <p>Email</p>
-          <input type="text" placeholder="Email..."></input>
-          <p>Languages</p>
-          <input type="text" placeholder="Languages..."></input>
           <p>Profile Picture</p>
           <input
             type="file"
@@ -41,6 +32,17 @@ class Profile extends Component {
             multiple="false"
             placeholder="Upload image..."
           ></input>
+          {/* <div className="updateProfBtn"> */}
+
+          {/* </div> */}
+        </div>
+        <div className="ProfInfo">
+          <p>Email</p>
+          <input type="text" placeholder="Email..."></input>
+          <p>Languages</p>
+          <input type="text" placeholder="Languages..."></input>
+          <br/>
+          <button onClick={this.addResource}>UPDATE</button>
         </div>
       </div>
     );

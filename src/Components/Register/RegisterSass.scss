@@ -20,6 +20,9 @@
         // margin-left: initial;
         color: $pinkPrimary;
     }
+        input {
+            width: 10vw;
+        }
         button {
             @include mainBtn;
             background-color: #fdabcb;
@@ -32,4 +35,18 @@
             }
 
 
+}
+
+
+@media screen and (max-width: 450px) {
+    .Register {
+        width: 80vw;
+        margin-top: 5vh;
+        input {
+           width: 50vw;
+        }
+        button {
+            width: 50vw;
+        }
+    }
 }

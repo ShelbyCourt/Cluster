@@ -1,41 +1,36 @@
 @import "../../variables.scss";
 
 .ProfileDiv {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  // align-items:baseline;
+  align-content: space-around;
+  background-color: black;
+  color: ghostwhite;
+  margin-left: 20vw;
+  margin-right: 20vw;
+  margin-top: 10vh;
+  padding-bottom: 5vh;
+  padding-top: 5vh;
+  .containerP {
+    // margin-top: -20vh;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    // align-items:baseline;
-    align-content: space-around;
-    background-color: black;
-    color: ghostwhite;
-    margin-left: 20vw;
-    margin-right: 20vw;
-    margin-top: 10vh;
-    padding-bottom: 5vh;
-    padding-top: 5vh;
-    .containerP {
-        // margin-top: -20vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        button {
-            @include smallBtn;
-            margin-bottom: 5 auto;
-        }
-
-// .ProfileDiv .updateProfBtn {
-//         margin-top: 50vh;
-//         justify-content: space-around;
-//         background-color: gold;
-//     }
-
-    // width: 35vw;
-    // height: 75vh;
+    flex-direction: column;
+    justify-content: space-between;
+    input {
+      display: flex;
+      justify-content: center;
+    }
 
     .ProfInfo {
       display: flex;
       flex-direction: column;
+      button {
+        @include smallBtn;
+        margin-top: 10px;
+      }
     }
   }
 }

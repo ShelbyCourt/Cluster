@@ -34,17 +34,13 @@
           justify-content: space-between;
 }
 
-.ProfileDiv .containerP button {
-  margin: 5px;
-  margin-bottom: 5px;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  font-family: "Elsie";
-  font-size: 18px;
-  border-radius: 14px;
-  margin-bottom: 5 auto;
+.ProfileDiv .containerP input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .ProfileDiv .containerP .ProfInfo {
@@ -55,5 +51,18 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.ProfileDiv .containerP .ProfInfo button {
+  margin: 5px;
+  margin-bottom: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-family: 'Cinzel', serif;
+  font-size: 18px;
+  border-radius: 14px;
+  margin-top: 10px;
 }
 /*# sourceMappingURL=ProfileSass.css.map */

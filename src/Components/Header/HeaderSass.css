@@ -16,11 +16,10 @@
   background-color: black;
   height: 20vh;
   width: 100vw;
+  overflow: hidden;
 }
 
 .header .Name h1 {
-  margin-left: 20vw;
-  position: relative;
   font-size: 50px;
   line-height: .5;
   color: #a87dff;
@@ -86,5 +85,69 @@
   background-color: #363636;
   border-radius: 20px;
   color: #38b6ff;
+}
+
+@media screen and (max-width: 1050px) {
+  .header {
+    display: inline;
+    padding-bottom: 5vh;
+  }
+  .header .Name h1 {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-right: 0 auto;
+    z-index: 1;
+    font-size: 40px;
+  }
+  .header .topnavleft {
+    margin-top: 5vh;
+    padding-top: 5vh;
+  }
+  .header .topnavleft h1 {
+    margin: 1vw;
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .header {
+    width: 100vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding-bottom: 5vh;
+  }
+  .header .Name h1 {
+    z-index: 1;
+    font-size: 30px;
+  }
+  .header .topnavleft {
+    margin-top: 5vh;
+    padding-top: 5vh;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .header .topnavleft h1 {
+    margin: 1vw;
+    font-size: 16px;
+  }
 }
 /*# sourceMappingURL=HeaderSass.css.map */
