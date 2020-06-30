@@ -97,7 +97,7 @@ class AddResource extends Component {
           </div>
           <br />
           <div className="bottomBtns">
-            <button onClick={this.deleteResource}>DELETE</button>
+            {/* <button onClick={this.deleteResource}>DELETE</button> */}
             <button onClick={this.addResource}>SAVE</button>
           </div>
         </div>

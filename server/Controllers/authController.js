@@ -16,12 +16,13 @@ module.exports = {
             const authenticated = bcrypt.compareSync(password, user[0].password)
             if(authenticated) {
                 req.session.user = {
-                    userId: user[0].id,
+                    userId: user[0].user_id,
                     username: user[0].username,
                     email: user[0].email,
                     languages: user[0].languages,
                     profilePicture: user[0].profile_pic
                 }
+                console.log(req.session.user)
                 res.status(200).send(req.session.user)
             } else {
                 res.status(403).send('Username or password is incorrect')

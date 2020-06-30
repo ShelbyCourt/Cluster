@@ -1,7 +1,8 @@
 @import "../../variables.scss";
 
 .Dash  {
-
+    background-color: white;
+    // display: flex;
     flex-direction: column;
     .TopDash {
         display: flex;
@@ -18,7 +19,7 @@
                 font-size: 18px;
                 line-height: 1;
                 &:hover {                   
-                    color: ghostwhite;                    
+                    color: ghostwhite;                
                 }
             }
         }
@@ -38,10 +39,59 @@
         flex-wrap: wrap;
         justify-content: space-around;
         align-items: center;
-        align-content: space-between;
-        .ResourceList .Vocabulary {
+        align-content: space-around;        
+        h3 {
+            font-size: 18;
+        }
+        p {
+            font-size: 14px;
+        }
+        .Vocabulary {
+            width: 20vw;
+            background-color: $bluePrimary;
+            padding: 3vh;
+            margin-top: 2px;
+            margin-bottom: 2px;
+        }
+        .Verbs {
+            width: 20vw;
             flex-direction: row;
+            background-color: $pinkPrimary;
+            padding: 3vh;
+            margin-top: 2px;
+            margin-bottom: 2px;  
+        }
+        .Adjectives {
+            width: 20vw;
+            flex-direction: row;
+            background-color: $greenPrimary;
+            padding: 3vh; 
+            margin-top: 2px;
+            margin-bottom: 2px;
+        }
+        .Adverbs {
+            width: 20vw;
+            flex-direction: row;
+            background-color: $purplePrimary;
+            padding: 3vh; 
+            margin-top: 2px;
+            margin-bottom: 2px;
+        }
+        .PodVid {
+            width: 20vw;
+            flex-direction: row;
+            background-color: $bluePrimary;
+            padding: 3vh; 
+            margin-top: 2px;
+            margin-bottom: 2px;
+        }
+        .Misc {
+            width: 20vw;
+            flex-direction: row;
+            background-color: $pinkPrimary;
+            padding: 3vh; 
+            margin-top: 2px;
+            margin-bottom: 2px;
         }
     }
 }
-

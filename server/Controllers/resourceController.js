@@ -43,10 +43,14 @@ module.exports = {
 
     getResourceCategory: async (req, res) => {
         db = req.app.get('db');
-        const { user_id } = req.session.user;
+        console.log(req.session.user)
+        const { userId } = req.session.user;
         const { category } = req.query;
+        console.log('category = ' + category)
+        console.log(userId, typeof userId)
 
-        const catResources = await db.get_resource_category([user_id, category])
+
+        const catResources = await db.get_resource_category([userId, category])
         console.log(catResources);
         return res.status(200).send(catResources);
     },
@@ -58,7 +62,5 @@ module.exports = {
         await db.delete_resource( resourceId )
         return res.status(200).send('Resource deleted')
     }
-
-
 
 }

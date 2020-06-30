@@ -1,4 +1,5 @@
 .Dash {
+  background-color: white;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -69,14 +70,83 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-line-pack: justify;
-      align-content: space-between;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
 }
 
-.Dash .ResourceList .ResourceList .Vocabulary {
+.Dash .ResourceList h3 {
+  font-size: 18;
+}
+
+.Dash .ResourceList p {
+  font-size: 14px;
+}
+
+.Dash .ResourceList .Vocabulary {
+  width: 20vw;
+  background-color: #38b6ff;
+  padding: 3vh;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.Dash .ResourceList .Verbs {
+  width: 20vw;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  background-color: #FF70A6;
+  padding: 3vh;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.Dash .ResourceList .Adjectives {
+  width: 20vw;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-color: #7ed957;
+  padding: 3vh;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.Dash .ResourceList .Adverbs {
+  width: 20vw;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-color: #a87dff;
+  padding: 3vh;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.Dash .ResourceList .PodVid {
+  width: 20vw;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-color: #38b6ff;
+  padding: 3vh;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.Dash .ResourceList .Misc {
+  width: 20vw;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-color: #FF70A6;
+  padding: 3vh;
+  margin-top: 2px;
+  margin-bottom: 2px;
 }
 /*# sourceMappingURL=DashboardSass.css.map */
