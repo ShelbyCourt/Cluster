@@ -88,6 +88,7 @@ class AddResource extends Component {
             <br />
             <div className="Field">
             <p>Category: </p>
+            <p className="choices">Choose from: Vocabulary, Verbs, Adjectives, Adverbs, Pronunciation, Podcasts and Videos, & Miscellaneous</p>
             {/* <Dropdown className="dropDown"
             options={catOptions} 
             onChange={this._onSelect} 

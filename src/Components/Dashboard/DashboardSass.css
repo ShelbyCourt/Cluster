@@ -79,7 +79,17 @@
 }
 
 .Dash .ResourceList p {
-  font-size: 14px;
+  font-size: 16px;
+}
+
+.Dash .ResourceList a {
+  font-family: "Raleway";
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.Dash .ResourceList a:hover {
+  color: ghostwhite;
 }
 
 .Dash .ResourceList .Vocabulary {
@@ -114,7 +124,7 @@
   margin-bottom: 10px;
 }
 
-.Dash .ResourceList .PodVid {
+.Dash .ResourceList .Pronunciation {
   width: 20vw;
   background-color: #38b6ff;
   padding: 3vh;
@@ -122,9 +132,17 @@
   margin-bottom: 10px;
 }
 
-.Dash .ResourceList .Misc {
+.Dash .ResourceList .PodVid {
   width: 20vw;
   background-color: #FF70A6;
+  padding: 3vh;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.Dash .ResourceList .Misc {
+  width: 20vw;
+  background-color: #7ed957;
   padding: 3vh;
   margin-top: 10px;
   margin-bottom: 10px;

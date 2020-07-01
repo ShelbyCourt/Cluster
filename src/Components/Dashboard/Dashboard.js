@@ -54,6 +54,7 @@ function Dashboard(props) {
                     <div>
                       <h3>{element.title}</h3>
                       <p>{element.description}</p>
+                      <a href={element.resource_url} target="_blank">Allez-y!</a>
                     </div>
                   );
                 }
@@ -80,6 +81,7 @@ function Dashboard(props) {
                     <div>
                       <h3>{element.title}</h3>
                       <p>{element.description}</p>
+                      <a href={element.resource_url} target="_blank">Allez-y!</a>
                     </div>
                   );
                 }
@@ -97,6 +99,7 @@ function Dashboard(props) {
                     <div>
                       <h3>{element.title}</h3>
                       <p>{element.description}</p>
+                      <a href={element.resource_url} target="_blank">Allez-y!</a>
                     </div>
                   );
                 }
@@ -114,6 +117,25 @@ function Dashboard(props) {
                     <div>
                       <h3>{element.title}</h3>
                       <p>{element.description}</p>
+                      <a href={element.resource_url} target="_blank">Allez-y!</a>
+                    </div>
+                  );
+                }
+              })}
+            </>
+          ) : null}
+        </div>
+        <div onClick={() => setCategory("Pronunciation")} className="Pronunciation">
+          <h2>Pronunciation</h2>
+          {category === "Pronunciation" ? (
+            <>
+              {resources.map((element, index) => {
+                if (index < 4) {
+                  return (
+                    <div>
+                      <h3>{element.title}</h3>
+                      <p>{element.description}</p>
+                      <a href={element.resource_url} target="_blank">Allez-y!</a>
                     </div>
                   );
                 }
@@ -134,6 +156,7 @@ function Dashboard(props) {
                     <div>
                       <h3>{element.title}</h3>
                       <p>{element.description}</p>
+                      <a href={element.resource_url} target="_blank">Allez-y!</a>
                     </div>
                   );
                 }
@@ -151,6 +174,7 @@ function Dashboard(props) {
                     <div>
                       <h3>{element.title}</h3>
                       <p>{element.description}</p>
+                      <a href={element.resource_url} target="_blank">Allez-y!</a>
                     </div>
                   );
                 }

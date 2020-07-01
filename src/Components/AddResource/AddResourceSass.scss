@@ -7,7 +7,7 @@
   justify-content: space-around;
   align-items: center;
   align-content: space-around;
-  line-height: .2;
+  line-height: 0.2;
   color: $purplePrimary;
   .Resource {
     // display: inline;
@@ -29,11 +29,17 @@
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-around;
-      align-items: center;
+      align-items: flex-start;
       align-content: space-around;
     }
     .Field {
       flex-direction: row;
+      line-height: 1.1;
+      width: 20vw;
+      .choices {
+        font-size: 14px;
+        color: grey;
+      }
     }
     input {
       margin: 10px;
@@ -66,20 +72,20 @@
     font-size: 22px;
     line-height: 1;
     .Resource h1 {
-        font-size: 28px;
-        // line-height: .75;
-        .AddResourceInput {
-            margin-top: 1vh;
-            margin-bottom: 1vh;
-        }
+      font-size: 28px;
+      // line-height: .75;
+      .AddResourceInput {
+        margin-top: 1vh;
+        margin-bottom: 1vh;
+      }
     }
   }
 
   @media screen and (max-width: 950px) {
     flex-direction: column;
     .AddResourceInput {
-        padding-left: 15vw;
-        padding-right: 15vw;
+      padding-left: 15vw;
+      padding-right: 15vw;
     }
   }
 }
