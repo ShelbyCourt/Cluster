@@ -97,4 +97,35 @@
   background-color: black;
   font-weight: 600;
 }
+
+@media screen and (max-width: 450px) {
+  .containerR {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    font-size: 22px;
+    line-height: 1;
+  }
+  .containerR .Resource h1 {
+    font-size: 28px;
+  }
+  .containerR .Resource h1 .AddResourceInput {
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .containerR {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .containerR .AddResourceInput {
+    padding-left: 15vw;
+    padding-right: 15vw;
+  }
+}
 /*# sourceMappingURL=AddResourceSass.css.map */

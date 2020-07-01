@@ -1,63 +1,85 @@
 @import "../../variables.scss";
 
 .containerR {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: space-around;
+  line-height: .2;
+  color: $purplePrimary;
+  .Resource {
+    // display: inline;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    align-content: space-around;
-    line-height: .2;
-    color: $purplePrimary;
-    .Resource {
-        // display: inline;
-        display: flex;        
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        // align-content: space-around;
-        // @include mainBox;  
-        background-color: ghostwhite;  
-        margin: 15px;    
-        padding: 15px;
-        width: 50vw;
-        padding-bottom: 25px;
-        -webkit-box-shadow: 10px 15px 10px -6px rgba(0, 0, 0, 0.75);
-                box-shadow: 10px 15px 10px -6px rgba(0, 0, 0, 0.75);
+    // align-content: space-around;
+    // @include mainBox;
+    background-color: ghostwhite;
+    margin: 15px;
+    padding: 15px;
+    width: 50vw;
+    padding-bottom: 25px;
+    -webkit-box-shadow: 10px 15px 10px -6px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 15px 10px -6px rgba(0, 0, 0, 0.75);
+    .AddResourceInput {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+      align-content: space-around;
+    }
+    .Field {
+      flex-direction: row;
+    }
+    input {
+      margin: 10px;
+      line-height: 1;
+    }
+    // .dropDown {
+    //     line-height: 1;
+    //     color:$prupl;
+    //     &:hover {
+    //         color: black;
+    //     }
+    // }
+    .bottomBtns button {
+      flex-direction: row;
+      justify-content: space-around;
+      @include smallBtn;
+      // margin: 25px;
+      margin-right: 80px;
+      margin-left: 80px;
+      &:hover {
+        color: $purplePrimary;
+        background-color: black;
+        font-weight: 600;
+      }
+    }
+  }
+
+  @media screen and (max-width: 450px) {
+    flex-direction: column;
+    font-size: 22px;
+    line-height: 1;
+    .Resource h1 {
+        font-size: 28px;
+        // line-height: .75;
         .AddResourceInput {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-around;
-	        align-items: center;
-	        align-content: space-around;
-        }
-            .Field{
-                flex-direction: row;
-            }
-        input {
-            margin: 10px;
-            line-height: 1;
-        }
-        // .dropDown {
-        //     line-height: 1;
-        //     color:$prupl;
-        //     &:hover {
-        //         color: black;
-        //     }
-        // }
-        .bottomBtns button {
-            flex-direction: row;
-            justify-content: space-around;
-            @include smallBtn;
-            // margin: 25px;
-            margin-right: 80px;
-            margin-left: 80px;
-            &:hover {
-                color: $purplePrimary;
-                background-color: black;
-                font-weight: 600;
-            }
+            margin-top: 1vh;
+            margin-bottom: 1vh;
         }
     }
+  }
+
+  @media screen and (max-width: 950px) {
+    flex-direction: column;
+    .AddResourceInput {
+        padding-left: 15vw;
+        padding-right: 15vw;
+    }
+  }
 }
