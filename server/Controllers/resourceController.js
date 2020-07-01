@@ -1,65 +1,83 @@
 module.exports = {
-    addNewResource: async (req, res) => {
-        db = req.app.get('db');
-        const { title, resource_url, category, language } = req.body
-        const { userId } = req.session.user;
-        console.log('user id = ' + userId)
-        // console.log(language);
+  addNewResource: async (req, res) => {
+    db = req.app.get("db");
+    const { title, resource_url, category, language } = req.body;
+    const { userId } = req.session.user;
+    console.log("user id = " + userId);
+    // console.log(language);
 
-        const newResource = await db.add_new_resource(title, resource_url, category, language, userId);
-        console.log(language);
-        return res.status(200).send(newResource);
-    },
+    const newResource = await db.add_new_resource(
+      title,
+      resource_url,
+      category,
+      language,
+      userId
+    );
+    console.log(language);
+    return res.status(200).send(newResource);
+  },
 
-    getUserResources: async (req, res) => {
-        db = req.app.get('db');
-        const { user_id } = req.session.user;
-        const { resource_url, title, description, category } = req.body;
-        // console.log('category = ' + category)
+  getUserResources: async (req, res) => {
+    db = req.app.get("db");
+    const { userId } = req.session.user;
+    const { title, resource_url, description, category } = req.body;
 
-        // const userResources = await db.get_user_resources( [req.session.user.id]);
-        const userResources = await db.get_user_resources( resource_url, title, description, category, user_id )
-        // console.log('userResources =' + userResources);
-        return res.status(200).send(userResources);
-        
-    },
+    // console.log('category = ' + category)
 
-    getOneResource: async (req, res) => {
-        db = req.app.get('db');
-        const { resourceId } = req.query
+    // const userResources = await db.get_user_resources( [req.session.user.id]);
+    const userResources = await db.get_user_resources(
+      title,
+      resource_url,
+      description,
+      category,
+      userId
+    );
+    // console.log('userResources =' + userResources);
+    return res.status(200).send(userResources);
+  },
 
-        const oneResource = await db.get_one_resource(resourceId)
-        return res.status(200).send(oneResource);
-    },
+  getOneResource: async (req, res) => {
+    db = req.app.get("db");
+    const { resourceId } = req.query;
 
-    updateResource: async (req, res) => {
-        db = req.app.get('db');
-        const { title, resource_url, description, notes, category } = req.body;
-        const { resourceId } = req.query;
+    const oneResource = await db.get_one_resource(resourceId);
+    return res.status(200).send(oneResource);
+  },
 
-        const updatedResource = await db.update_resource( title, resource_url, description, notes, category, resourceId )
-        return res.status(200).send(updatedResource);        
-    },
+  updateResource: async (req, res) => {
+    db = req.app.get("db");
+    const { title, resource_url, description, notes, category } = req.body;
+    const { resourceId } = req.query;
 
-    getResourceCategory: async (req, res) => {
-        db = req.app.get('db');
-        // console.log(req.session.user)
-        const { userId } = req.session.user;
-        const { category } = req.query;
-        // console.log('category = ' + category)
-        // console.log(userId, typeof userId)
+    const updatedResource = await db.update_resource(
+      title,
+      resource_url,
+      description,
+      notes,
+      category,
+      resourceId
+    );
+    return res.status(200).send(updatedResource);
+  },
 
-        const catResources = await db.get_resource_category([userId, category])
-        // console.log(catResources);
-        return res.status(200).send(catResources);
-    },
+  getResourceCategory: async (req, res) => {
+    db = req.app.get("db");
+    // console.log(req.session.user)
+    const { userId } = req.session.user;
+    const { category } = req.query;
+    // console.log('category = ' + category)
+    // console.log(userId, typeof userId)
 
-    deleteResource: async (req, res) => {
-        db = req.app.get('db');
-        const { resourceId } = req.query
+    const catResources = await db.get_resource_category([userId, category]);
+    // console.log(catResources);
+    return res.status(200).send(catResources);
+  },
 
-        await db.delete_resource( resourceId )
-        return res.status(200).send('Resource deleted')
-    }
+  deleteResource: async (req, res) => {
+    db = req.app.get("db");
+    const { resourceId } = req.query;
 
-}
+    await db.delete_resource(resourceId);
+    return res.status(200).send("Resource deleted");
+  },
+};

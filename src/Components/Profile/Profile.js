@@ -20,10 +20,11 @@ class Profile extends Component {
   };
 
   render() {
+    
     return (
       <div className="ProfileDiv">
         <div className="containerP">
-          <h1>Username</h1>
+          <h1>X</h1>
           <p>doiejf</p>
           <p>Profile Picture</p>
           <input

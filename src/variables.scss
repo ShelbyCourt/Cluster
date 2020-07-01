@@ -52,3 +52,12 @@ $SecFont: 'Raleway';
     border-radius: 14px;
         
 }
+
+@mixin resourceDisplay ($catback) {
+    width: 20vw;
+    background-color: $catback;
+    padding: 3vh;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    
+}

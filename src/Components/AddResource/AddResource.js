@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import axios from "axios";
 import { addResource } from "../../Redux/resourceReducer";
 import { connect } from "react-redux";
+// import Dropdown from 'react-dropdown';
+
 
 // import "./ResourceInfo.css";
 import "./AddResourceSass.css";
@@ -41,11 +43,22 @@ class AddResource extends Component {
           res.data.language,
           res.data.user_id
         );
+        this.setState({title: '', resource_url: '', category: '', language: ''});
       });
   };
 
   render() {
     const { title, resource_url, category, language } = this.state;
+    // const catOptions = [
+    //   'Vocabulary',
+    //   'Verbs',
+    //   'Adjectives',
+    //   'Adverbs',
+    //   'Podcasts and Videos',
+    //   'Miscellaneous'
+    // ];
+    // const defaultOption = catOptions[0];
+
     return (
       <div className="containerR">
         <div className="Resource">
@@ -75,6 +88,12 @@ class AddResource extends Component {
             <br />
             <div className="Field">
             <p>Category: </p>
+            {/* <Dropdown className="dropDown"
+            options={catOptions} 
+            onChange={this._onSelect} 
+            value={defaultOption} 
+            placeholder="Select an option" /> */}
+
             <input
               type="text"
               placeholder="Category..."

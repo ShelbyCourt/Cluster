@@ -47,51 +47,22 @@
             font-size: 14px;
         }
         .Vocabulary {
-            width: 20vw;
-            background-color: $bluePrimary;
-            padding: 3vh;
-            margin-top: 2px;
-            margin-bottom: 2px;
+            @include resourceDisplay ($bluePrimary)
         }
         .Verbs {
-            width: 20vw;
-            flex-direction: row;
-            background-color: $pinkPrimary;
-            padding: 3vh;
-            margin-top: 2px;
-            margin-bottom: 2px;  
+            @include resourceDisplay ($pinkPrimary)
         }
         .Adjectives {
-            width: 20vw;
-            flex-direction: row;
-            background-color: $greenPrimary;
-            padding: 3vh; 
-            margin-top: 2px;
-            margin-bottom: 2px;
+            @include resourceDisplay ($greenPrimary)
         }
         .Adverbs {
-            width: 20vw;
-            flex-direction: row;
-            background-color: $purplePrimary;
-            padding: 3vh; 
-            margin-top: 2px;
-            margin-bottom: 2px;
+            @include resourceDisplay ($purplePrimary)
         }
         .PodVid {
-            width: 20vw;
-            flex-direction: row;
-            background-color: $bluePrimary;
-            padding: 3vh; 
-            margin-top: 2px;
-            margin-bottom: 2px;
+            @include resourceDisplay ($bluePrimary)
         }
         .Misc {
-            width: 20vw;
-            flex-direction: row;
-            background-color: $pinkPrimary;
-            padding: 3vh; 
-            margin-top: 2px;
-            margin-bottom: 2px;
+            @include resourceDisplay ($pinkPrimary)
         }
     }
 }
