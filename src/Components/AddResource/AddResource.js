@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-import { updateResource } from "../../Redux/resourceReducer";
+import { addResource } from "../../Redux/resourceReducer";
 import { connect } from "react-redux";
 
 // import "./ResourceInfo.css";
@@ -34,12 +34,12 @@ class AddResource extends Component {
         language,
       })
       .then((res) => {
-        this.props.updateResource(
+        this.props.addResource(
           res.data.title,
           res.data.resource_url,
           res.data.category,
           res.data.language,
-          res.data.resourceId
+          res.data.user_id
         );
       });
   };
@@ -106,6 +106,6 @@ class AddResource extends Component {
   }
 }
 
-const mapDispatchToProps = { updateResource: updateResource };
+const mapDispatchToProps = { addResource: addResource };
 
 export default connect(null, mapDispatchToProps)(AddResource);

@@ -1,12 +1,12 @@
 module.exports = {
     addNewResource: async (req, res) => {
         db = req.app.get('db');
-        const { title, resource_url, description, notes, category, language } = req.body
-        const { user_id } = req.session.user;
-        console.log('user id = ' + user_id)
+        const { title, resource_url, category, language } = req.body
+        const { userId } = req.session.user;
+        console.log('user id = ' + userId)
         // console.log(language);
 
-        const newResource = await db.add_new_resource(title, resource_url, description, notes, category, language, user_id);
+        const newResource = await db.add_new_resource(title, resource_url, category, language, userId);
         console.log(language);
         return res.status(200).send(newResource);
     },
@@ -15,11 +15,11 @@ module.exports = {
         db = req.app.get('db');
         const { user_id } = req.session.user;
         const { resource_url, title, description, category } = req.body;
-        console.log('category = ' + category)
+        // console.log('category = ' + category)
 
         // const userResources = await db.get_user_resources( [req.session.user.id]);
         const userResources = await db.get_user_resources( resource_url, title, description, category, user_id )
-        console.log('userResources =' + userResources);
+        // console.log('userResources =' + userResources);
         return res.status(200).send(userResources);
         
     },
@@ -43,15 +43,14 @@ module.exports = {
 
     getResourceCategory: async (req, res) => {
         db = req.app.get('db');
-        console.log(req.session.user)
+        // console.log(req.session.user)
         const { userId } = req.session.user;
         const { category } = req.query;
-        console.log('category = ' + category)
-        console.log(userId, typeof userId)
-
+        // console.log('category = ' + category)
+        // console.log(userId, typeof userId)
 
         const catResources = await db.get_resource_category([userId, category])
-        console.log(catResources);
+        // console.log(catResources);
         return res.status(200).send(catResources);
     },
 

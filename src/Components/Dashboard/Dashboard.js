@@ -36,13 +36,6 @@ function Dashboard (props) {
             <Link to="/profile">
               <p>VIEW PROFILE</p>
             </Link>
-            {/* <input
-              type="text"
-              placeholder="Search..."
-              name="search"
-              // value={search}
-              onChange={(e) => this.changeHandler(e)}
-            /> */}
           </div>
           <div className="addResource">
             <Link to="/AddResource">
@@ -61,7 +54,8 @@ function Dashboard (props) {
                     if(index < 4) {
                       return (
                         <div> 
-                          <p>{element.title}</p>
+                          <h3>{element.title}</h3>
+                          <p>{element.resource_url}</p>
                         </div>
                       )
                     }
@@ -77,8 +71,7 @@ function Dashboard (props) {
                 title,
                 description,
                 url,
-                "Vocabulary", */}
-              
+                "Vocabulary", */}              
             </div>
           </div>
           <div className="Verbs" onClick={() => setCategory('Verbs')} >
@@ -89,7 +82,7 @@ function Dashboard (props) {
                   resources.map((element, index)=> {
                     if(index < 4) {
                       return (
-                        <div> 
+                        <div>                           
                           <p>{element.title}</p>
                         </div>
                       )
@@ -102,18 +95,82 @@ function Dashboard (props) {
           </div>
           <div onClick={() => setCategory('Adjectives')} className="Adjectives">
             <h2>Adjectives</h2>
+            {category === 'Adjectives' ? (
+              <>
+                {
+                  resources.map((element, index)=> {
+                    if(index < 4) {
+                      return (
+                        <div>                           
+                          <p>{element.title}</p>
+                        </div>
+                      )
+                    }
+                  })
+                }
+              </>             
+            )
+             : null }
           </div>
           <div onClick={() => setCategory('Adverbs')} className="Adverbs">
             <h2>Adverbs</h2>
+            {category === 'Adverbs' ? (
+              <>
+                {
+                  resources.map((element, index)=> {
+                    if(index < 4) {
+                      return (
+                        <div>                           
+                          <p>{element.title}</p>
+                        </div>
+                      )
+                    }
+                  })
+                }
+              </>             
+            )
+             : null }
           </div>
           <div onClick={() => setCategory('Podcasts and Videos')}className="PodVid">
             <h2>Podcasts and Videos</h2>
+            {category === 'Podcasts and Videos' ? (
+              <>
+                {
+                  resources.map((element, index)=> {
+                    if(index < 4) {
+                      return (
+                        <div>                           
+                          <p>{element.title}</p>
+                        </div>
+                      )
+                    }
+                  })
+                }
+              </>             
+            )
+             : null }
           </div>
           <div onClick={() => setCategory('Miscellaneous')} className="Misc">
             <h2>Miscellaneous</h2>
+            {category === 'Miscellaneous' ? (
+              <>
+                {
+                  resources.map((element, index)=> {
+                    if(index < 4) {
+                      return (
+                        <div>                           
+                          <p>{element.title}</p>
+                        </div>
+                      )
+                    }
+                  })
+                }
+              </>             
+            )
+             : null }
           </div>
         </div>
-      // </div>
+      </div>
     );
 }
 
