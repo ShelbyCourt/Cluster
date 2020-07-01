@@ -86,47 +86,72 @@
   width: 20vw;
   background-color: #38b6ff;
   padding: 3vh;
-  margin-top: 2px;
-  margin-bottom: 2px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .Dash .ResourceList .Verbs {
   width: 20vw;
   background-color: #FF70A6;
   padding: 3vh;
-  margin-top: 2px;
-  margin-bottom: 2px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .Dash .ResourceList .Adjectives {
   width: 20vw;
   background-color: #7ed957;
   padding: 3vh;
-  margin-top: 2px;
-  margin-bottom: 2px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .Dash .ResourceList .Adverbs {
   width: 20vw;
   background-color: #a87dff;
   padding: 3vh;
-  margin-top: 2px;
-  margin-bottom: 2px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .Dash .ResourceList .PodVid {
   width: 20vw;
   background-color: #38b6ff;
   padding: 3vh;
-  margin-top: 2px;
-  margin-bottom: 2px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .Dash .ResourceList .Misc {
   width: 20vw;
   background-color: #FF70A6;
   padding: 3vh;
-  margin-top: 2px;
-  margin-bottom: 2px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 450px) {
+  .Dash {
+    width: 100vw;
+    margin-top: 5vh;
+  }
+  .Dash .TopDash .Welcome h1 {
+    font-size: 22px;
+  }
+  .Dash .ResourceList h2 {
+    font-size: 10px;
+    word-wrap: break-word;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .Dash {
+    width: 100vw;
+    margin-top: 5vh;
+  }
+  .Dash .ResourceList h2 {
+    font-size: 22px;
+    word-wrap: break-word;
+  }
 }
 /*# sourceMappingURL=DashboardSass.css.map */

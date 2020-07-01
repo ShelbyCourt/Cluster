@@ -1,68 +1,105 @@
 @import "../../variables.scss";
 
-.Dash  {
-    background-color: white;
-    // display: flex;
-    flex-direction: column;
-    .TopDash {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
+.Dash {
+  background-color: white;
+  // display: flex;
+  flex-direction: column;
+  .TopDash {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .Welcome {
+    h1 {
+      font-weight: 600;
+      line-height: 1;
     }
-        .Welcome {
-            h1 {
-                font-weight: 600;
-                line-height: 1;
-            }
-            p{
-                font-size: 18px;
-                line-height: 1;
-                &:hover {                   
-                    color: ghostwhite;                
-                }
-            }
-        }
-    .addResource button {
-        @include mainBtn;
-        background-color: $purpleSecond;
-        color: black;
-        &:hover {
-            color: $purplePrimary;
-            background-color: black;
-            font-weight: 600;
-        }    
+    p {
+      font-size: 18px;
+      line-height: 1;
+      &:hover {
+        color: ghostwhite;
+      }
+    }
+  }
+  .addResource button {
+    @include mainBtn;
+    background-color: $purpleSecond;
+    color: black;
+    &:hover {
+      color: $purplePrimary;
+      background-color: black;
+      font-weight: 600;
+    }
+  }
+  .ResourceList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: space-around;
+    h3 {
+      font-size: 18;
+    }
+    p {
+      font-size: 14px;
+    }
+    .Vocabulary {
+      @include resourceDisplay($bluePrimary);
+    }
+    .Verbs {
+      @include resourceDisplay($pinkPrimary);
+    }
+    .Adjectives {
+      @include resourceDisplay($greenPrimary);
+    }
+    .Adverbs {
+      @include resourceDisplay($purplePrimary);
+    }
+    .PodVid {
+      @include resourceDisplay($bluePrimary);
+    }
+    .Misc {
+      @include resourceDisplay($pinkPrimary);
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .Dash {
+    width: 100vw;
+    margin-top: 5vh;
+    .TopDash .Welcome h1 {
+        font-size: 22px;
     }
     .ResourceList {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        align-items: center;
-        align-content: space-around;        
-        h3 {
-            font-size: 18;
-        }
-        p {
-            font-size: 14px;
-        }
-        .Vocabulary {
-            @include resourceDisplay ($bluePrimary)
-        }
-        .Verbs {
-            @include resourceDisplay ($pinkPrimary)
-        }
-        .Adjectives {
-            @include resourceDisplay ($greenPrimary)
-        }
-        .Adverbs {
-            @include resourceDisplay ($purplePrimary)
-        }
-        .PodVid {
-            @include resourceDisplay ($bluePrimary)
-        }
-        .Misc {
-            @include resourceDisplay ($pinkPrimary)
-        }
+      h2 {
+        font-size: 10px;
+        word-wrap: break-word;
+      }
+    //   button {
+    //     width: 20vw;
+
+    //   }
     }
+  }
 }
+
+@media screen and (max-width: 950px) {
+    .Dash {
+      width: 100vw;
+      margin-top: 5vh;
+      .ResourceList {
+        h2 {
+          font-size: 22px;
+          word-wrap: break-word;
+        }
+        // button {
+        //   width: 35vw;
+        // }
+      }
+    }
+  }
+  
