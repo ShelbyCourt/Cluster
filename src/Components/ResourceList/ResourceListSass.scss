@@ -1,8 +1,9 @@
 @import "../../variables.scss";
 
 .rlcontainer {
-  background-image: linear-gradient(0.25turn, $purplePrimary, $bluePrimary);
-  background-repeat: no-repeat;
+  // background-image: linear-gradient(0.25turn, $purplePrimary, $bluePrimary);
+  // background-repeat: no-repeat;
+  background-color: $bluePrimary;
   padding-top: 3vh;
   h1 {
   color: white;

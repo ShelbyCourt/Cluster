@@ -1,8 +1,9 @@
 @import "../../variables.scss";
 
 .Dash {
-  // background-color:black; 
-  // display: flex;
+  background-color:black; 
+  height: 100vh;
+  display: flex;
   flex-direction: column;
   .TopDash {
     display: flex;
@@ -41,10 +42,9 @@
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    align-content: space-around;  
-    border-radius: 12px;  
+    align-content: space-around;    
     h3 {
-      font-size: 18;
+      font-size: 20;
     }
     p {
       font-size: 16px;

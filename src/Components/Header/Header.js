@@ -4,7 +4,6 @@ import { connect } from "react-redux";
 import { logoutUser } from "../../Redux/userReducer";
 import axios from "axios";
 
-
 // import "./Header.css";
 import "./HeaderSass.css";
 
@@ -21,17 +20,16 @@ class Header extends Component {
   logout() {
     // axios GET to /auth/logout here
     axios
-      .post('/auth/logout')
+      .post("/auth/logout")
       .then(() => {
         this.props.logoutUser({});
       })
       .catch((err) => console.log(err));
   }
 
-
   render() {
-  console.log(this.props)
-  
+    console.log(this.props);
+
     return (
       <div className="header">
         <div className="topnavleft">
@@ -44,12 +42,13 @@ class Header extends Component {
               <h1 className="Home">Home</h1>
             </Link>
           )}
-          <Link to="/about">
-            <h1 className="About">About</h1>
-          </Link>
           <Link to="/FAQ">
-            <h1 className="FAQ">FAQ</h1>
+            <h1 className="FAQ">Who</h1>
           </Link>
+          <Link to="/about">
+            <h1 className="About">What</h1>
+          </Link>
+
           <Link to="/Contact">
             <h1 className="Contact">Contact</h1>
           </Link>
@@ -63,7 +62,8 @@ class Header extends Component {
           )}
         </div>
         <div className="Name">
-          <h1>clusteringly</h1>        </div>
+          <h1>clusteringly</h1>{" "}
+        </div>
       </div>
     );
   }

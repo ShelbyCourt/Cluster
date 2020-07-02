@@ -1,0 +1,28 @@
+@import "../../variables.scss";
+
+.AllContact {
+  background-image: url("Hearts.png");
+  // background-repeat: no-repeat;
+  background-position: 0% 0%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: space-around;
+  height: 100vh;
+  .Contact {
+    background-color: black;
+    height: 25vh;
+    width: 35vw;
+    margin: 20px;
+    padding: 10px;
+    line-height: 1.5;
+    h1 {
+      color: white;
+    }
+    p {
+      color: $greenPrimary;
+    }
+  }
+}
