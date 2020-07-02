@@ -36,16 +36,16 @@ module.exports = {
     // console.log('userResources =' + userResources);
     if (search) {
       const filteredResources = userResources.filter((resource) => {
-        if (resource.title.toLowerCase().includes(search.toLowerCase)) {
+        if (resource.title.toLowerCase().includes(search.toLowerCase())) {
           return resource;
         }
-        if (resource.resource_url.includes(search)) {
+        if (resource.resource_url.toLowerCase().includes(search.toLowerCase())) {
           return resource;
         }
         // if (resource.description.includes(search)) {
         //   return resource;
         // }
-        if (resource.category.includes(search)) {
+        if (resource.category.toLowerCase().includes(search.toLowerCase())) {
           return resource;
         }
       });

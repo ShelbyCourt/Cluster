@@ -52,7 +52,7 @@ function ResourceList(props) {
 
   // run this when search button clicked
   useEffect(() => {
-    console.log('search was updated to: ' + search)
+    //console.log('search was updated to: ' + search)
     //getUserResources();
   }, [search]);
 
