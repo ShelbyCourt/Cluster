@@ -75,8 +75,8 @@ function ResourceList(props) {
                   return (
                     <div className="listitems">
                       <h3>{element.title}</h3>
-                      {/* <p>{element.description}</p> */}
-                      <a href={element.resource_url} target="_blank">Allez-y!</a>
+                      <p>{element.category}</p>
+                      <a href={element.resource_url} target="_blank">Allez-y!</a> 
                     </div>
                   );
                 }

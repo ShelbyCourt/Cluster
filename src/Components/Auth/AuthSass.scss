@@ -1,13 +1,20 @@
 @import "../../variables.scss";
 
+body{
+    background-color: black;
+    background-image: url("Cluster-1.png");
+    background-position: 0% center;
+}
+
 .Auth {
     @include mainBox;
+    background-color: white;
     margin-left: 60%;    
     .Login {
         margin: 10px;
         color: $bluePrimary;
         font-size: 20px;
-                line-height: .5;
+        line-height: .5;
     }
         p {
             font-family: $SecFont;
@@ -31,7 +38,7 @@
         
         input {
             margin-bottom: 20px;
-            padding: 10px;
+            padding: 5px;
         }
         
     .Register {
@@ -54,8 +61,22 @@
     }
 }
 
-/* .heartback {
-    background-image: url(../../Assets/Pers-Proj.png);
-    min-height: 380px;
-    z-index: 0;
-  } */
+@media screen and (max-width: 450px) {
+    .Auth {
+        margin: auto;
+        width: 80vw;
+        margin-top: 5vh;
+        input {
+           width: 50vw;
+        }
+        button {
+            margin: auto;
+            width: 50vw;
+        }
+    }
+}
+
+
+@media screen and (max-width: 950px) {
+
+}

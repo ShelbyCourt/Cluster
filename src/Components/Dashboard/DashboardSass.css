@@ -160,6 +160,9 @@
     font-size: 10px;
     word-wrap: break-word;
   }
+  .Dash .ResourceList h3 {
+    word-wrap: break-word;
+  }
 }
 
 @media screen and (max-width: 950px) {

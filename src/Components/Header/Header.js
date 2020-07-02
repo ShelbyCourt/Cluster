@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import { logoutUser } from "../../Redux/userReducer";
 import axios from "axios";
 
+
 // import "./Header.css";
 import "./HeaderSass.css";
 
@@ -62,8 +63,7 @@ class Header extends Component {
           )}
         </div>
         <div className="Name">
-          <h1>clusteringly</h1>
-        </div>
+          <h1>clusteringly</h1>        </div>
       </div>
     );
   }

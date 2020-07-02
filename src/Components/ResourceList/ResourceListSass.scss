@@ -1,22 +1,43 @@
 @import "../../variables.scss";
 
 .rlcontainer {
-  background-image: linear-gradient(0.25turn, $greenPrimary, $bluePrimary);
+  background-image: linear-gradient(0.25turn, $purplePrimary, $bluePrimary);
   background-repeat: no-repeat;
-  padding-top: 5vh;
+  padding-top: 3vh;
+  h1 {
+  color: white;
+  }  
   input {
     margin: 3vh;
   }
   .resourcelist {
     background-color: ghostwhite;
-
+    // height: 60vh;
     padding-top: 3vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: space-around;
+
     .listitems {
         background-image: linear-gradient(0.25turn, $bluePrimary, $greenPrimary);
-        width: 40vw;
+        width: 30vw;
         padding: 2vh;
-        -webkit-box-shadow: 10px 15px 10px -6px rgba(39, 39, 39, 0.75);
-        box-shadow: 10px 15px 10px -6px rgba(29, 29, 29, 0.75);
+        margin-bottom: 3vh;
+        // -webkit-box-shadow: 10px 15px 10px -6px rgba(39, 39, 39, 0.75);
+        // box-shadow: 10px 15px 10px -6px rgba(29, 29, 29, 0.75);
+        h3 {
+          background-color: ghostwhite;
+          -webkit-box-shadow: 10px 15px 10px -6px rgba(39, 39, 39, 0.75);
+          box-shadow: 10px 15px 10px -6px rgba(29, 29, 29, 0.75);
+          padding-bottom: 0.5vh;
+          padding-top: 0.5vh;
+        }
+        p {
+          font-size: 16px;
+        }
     }
   }
 }

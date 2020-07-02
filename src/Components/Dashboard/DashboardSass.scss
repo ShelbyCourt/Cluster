@@ -39,7 +39,7 @@
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    align-content: space-around;
+    align-content: space-around;    
     h3 {
       font-size: 18;
     }
@@ -90,10 +90,9 @@
         font-size: 10px;
         word-wrap: break-word;
       }
-    //   button {
-    //     width: 20vw;
-
-    //   }
+      h3 {
+        word-wrap: break-word;
+      }
     }
   }
 }
@@ -107,9 +106,6 @@
           font-size: 22px;
           word-wrap: break-word;
         }
-        // button {
-        //   width: 35vw;
-        // }
       }
     }
   }

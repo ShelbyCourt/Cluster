@@ -1,3 +1,9 @@
+body {
+  background-color: black;
+  background-image: url("Cluster-1.png");
+  background-position: 0% center;
+}
+
 .Auth {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -13,6 +19,7 @@
   background-color: ghostwhite;
   width: 30vw;
   margin-top: 3%;
+  background-color: white;
   margin-left: 60%;
 }
 
@@ -54,7 +61,7 @@
 
 .Auth input {
   margin-bottom: 20px;
-  padding: 10px;
+  padding: 5px;
 }
 
 .Auth .Register {
@@ -92,9 +99,18 @@
   font-size: 32px;
 }
 
-/* .heartback {
-    background-image: url(../../Assets/Pers-Proj.png);
-    min-height: 380px;
-    z-index: 0;
-  } */
+@media screen and (max-width: 450px) {
+  .Auth {
+    margin: auto;
+    width: 80vw;
+    margin-top: 5vh;
+  }
+  .Auth input {
+    width: 50vw;
+  }
+  .Auth button {
+    margin: auto;
+    width: 50vw;
+  }
+}
 /*# sourceMappingURL=AuthSass.css.map */
