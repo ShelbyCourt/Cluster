@@ -20,7 +20,7 @@ class Header extends Component {
   logout() {
     // axios GET to /auth/logout here
     axios
-      .get('/auth/logout')
+      .post('/auth/logout')
       .then(() => {
         this.props.logoutUser({});
       })
