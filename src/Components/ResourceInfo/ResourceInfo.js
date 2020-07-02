@@ -24,7 +24,7 @@ class ResourceInfo extends Component {
     });
   };
 
-  addResource = (e) => {
+  updateResource = (e) => {
     e.preventDefault();
     const {
       title,
@@ -34,8 +34,7 @@ class ResourceInfo extends Component {
       category,
       language,
     } = this.state;
-    axios
-      .post("/api/resources", {
+    axios.put("/api/resources", {
         title,
         resource_url,
         description,
@@ -67,9 +66,10 @@ class ResourceInfo extends Component {
     } = this.state;
     return (
       <div className="container">
-        <div className="RegInfo">
-          <h1>Resource Information</h1>
+        <h1>Resource Information</h1>
+        <form className="ResInfo">
           <p>Title: </p>
+          <p> current title of resource</p>
           <input
             type="text"
             placeholder="Title..."
@@ -127,7 +127,7 @@ class ResourceInfo extends Component {
             <button onClick={this.deleteResource}>DELETE</button>
             <button onClick={this.addResource}>SAVE</button>
           </div>
-        </div>
+        </form>
       </div>
     );
   }

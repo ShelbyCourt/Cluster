@@ -2,19 +2,29 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  line-height: .2;
-}
-
-.container .RegInfo {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 1;
+}
+
+.container .ResInfo {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -30,38 +40,34 @@
   width: 30vw;
   margin-top: 3%;
   background-color: #9dd7f8;
-  width: 50vw;
+  width: 65vw;
+  height: 30vh;
 }
 
-.container .RegInfo input {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: 10px;
+.container .ResInfo input {
+  margin: 20px;
   line-height: 1;
 }
 
-.container .RegInfo .bottomBtns button {
-  -webkit-box-orient: horizontal;
+.container .ResInfo .bottomBtns button {
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  margin: 10px;
-  margin-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  margin: 5px;
+  margin-bottom: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   font-family: 'Cinzel', serif;
-  font-size: 25px;
-  border-radius: 12px;
-  margin-right: 80px;
-  margin-left: 80px;
+  font-size: 18px;
+  border-radius: 14px;
 }
 
-.container .RegInfo .bottomBtns button:hover {
+.container .ResInfo .bottomBtns button:hover {
   color: #38b6ff;
   background-color: black;
   font-weight: 600;

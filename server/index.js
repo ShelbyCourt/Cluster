@@ -34,10 +34,6 @@ app.delete('/api/resources', resourceCtrl.deleteResource)
 
 app.get('/api/user', userCtrl.getUser)
 
-
-
-
-
 massive({
     connectionString: CONNECTION_STRING,
     ssl: {

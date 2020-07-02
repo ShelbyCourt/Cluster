@@ -20,14 +20,17 @@ class Header extends Component {
   logout() {
     // axios GET to /auth/logout here
     axios
-      .get("/auth/logout")
+      .get('/auth/logout')
       .then(() => {
         this.props.logoutUser({});
       })
       .catch((err) => console.log(err));
   }
 
+
   render() {
+  console.log(this.props)
+  
     return (
       <div className="header">
         <div className="topnavleft">
