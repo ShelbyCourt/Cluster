@@ -1,7 +1,10 @@
-body {
+.AllAuth {
   background-color: black;
+  height: 100vh;
+  width: 100%;
   background-image: url("Cluster-1.png");
-  background-position: 0% center;
+  background-repeat: no-repeat;
+  background-position: 0% 0%;
 }
 
 .Auth {
@@ -21,6 +24,7 @@ body {
   margin-top: 3%;
   background-color: white;
   margin-left: 60%;
+  margin-top: 10%;
 }
 
 .Auth .Login {

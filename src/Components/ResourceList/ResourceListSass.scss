@@ -6,12 +6,20 @@
   padding-top: 3vh;
   h1 {
   color: white;
+  font-size: 32px;
   }  
   input {
     margin: 3vh;
+    padding: .5%;
+  }
+  button {
+    @include smallBtn;
+    &:hover {
+      background-color: $greenSecond;
+    }
   }
   .resourcelist {
-    background-color: ghostwhite;
+    background-color:black;
     // height: 60vh;
     padding-top: 3vh;
     display: flex;
@@ -26,12 +34,14 @@
         width: 30vw;
         padding: 2vh;
         margin-bottom: 3vh;
+        border-radius: 12px;
         // -webkit-box-shadow: 10px 15px 10px -6px rgba(39, 39, 39, 0.75);
         // box-shadow: 10px 15px 10px -6px rgba(29, 29, 29, 0.75);
         h3 {
           background-color: ghostwhite;
           -webkit-box-shadow: 10px 15px 10px -6px rgba(39, 39, 39, 0.75);
           box-shadow: 10px 15px 10px -6px rgba(29, 29, 29, 0.75);
+          border-radius: 12px;
           padding-bottom: 0.5vh;
           padding-top: 0.5vh;
         }

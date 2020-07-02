@@ -1,5 +1,4 @@
 .Dash {
-  background-color: white;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -24,15 +23,17 @@
 .Dash .Welcome h1 {
   font-weight: 600;
   line-height: 1;
+  color: white;
 }
 
 .Dash .Welcome p {
   font-size: 18px;
   line-height: 1;
+  color: white;
 }
 
 .Dash .Welcome p:hover {
-  color: ghostwhite;
+  color: #7ed957;
 }
 
 .Dash .addResource button {
@@ -72,6 +73,7 @@
           align-items: center;
   -ms-flex-line-pack: distribute;
       align-content: space-around;
+  border-radius: 12px;
 }
 
 .Dash .ResourceList h3 {

@@ -1,7 +1,7 @@
 @import "../../variables.scss";
 
 .Dash {
-  background-color: white;
+  // background-color:black; 
   // display: flex;
   flex-direction: column;
   .TopDash {
@@ -14,12 +14,14 @@
     h1 {
       font-weight: 600;
       line-height: 1;
+      color: white;
     }
     p {
       font-size: 18px;
       line-height: 1;
+      color: white;
       &:hover {
-        color: ghostwhite;
+        color: $greenPrimary;
       }
     }
   }
@@ -39,7 +41,8 @@
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    align-content: space-around;    
+    align-content: space-around;  
+    border-radius: 12px;  
     h3 {
       font-size: 18;
     }

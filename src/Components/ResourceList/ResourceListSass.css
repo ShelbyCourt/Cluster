@@ -7,14 +7,32 @@
 
 .rlcontainer h1 {
   color: white;
+  font-size: 32px;
 }
 
 .rlcontainer input {
   margin: 3vh;
+  padding: .5%;
+}
+
+.rlcontainer button {
+  margin: 5px;
+  margin-bottom: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-family: 'Cinzel', serif;
+  font-size: 18px;
+  border-radius: 14px;
+}
+
+.rlcontainer button:hover {
+  background-color: #bfffb4;
 }
 
 .rlcontainer .resourcelist {
-  background-color: ghostwhite;
+  background-color: black;
   padding-top: 3vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -40,12 +58,14 @@
   width: 30vw;
   padding: 2vh;
   margin-bottom: 3vh;
+  border-radius: 12px;
 }
 
 .rlcontainer .resourcelist .listitems h3 {
   background-color: ghostwhite;
   -webkit-box-shadow: 10px 15px 10px -6px rgba(39, 39, 39, 0.75);
   box-shadow: 10px 15px 10px -6px rgba(29, 29, 29, 0.75);
+  border-radius: 12px;
   padding-bottom: 0.5vh;
   padding-top: 0.5vh;
 }
