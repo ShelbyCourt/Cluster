@@ -20,7 +20,7 @@ module.exports = {
   getUserResources: async (req, res) => {
     db = req.app.get("db");
     const { userId } = req.session.user;
-    const { title, resource_url, description, category } = req.body;
+    const { title, resource_url, category } = req.body;
     const { search } = req.query;
 
     // console.log('category = ' + category)
@@ -29,29 +29,28 @@ module.exports = {
     const userResources = await db.get_user_resources(
       title,
       resource_url,
-      description,
+      // description,
       category,
       userId
     );
     // console.log('userResources =' + userResources);
-    if ( search ) {
-      const filteredResources = userResources.filter(resource => {
-          if( resource.title.toLowerCase().includes(search.toLowerCase)){
-              return resource;
-          }
-          if( resource.resource_url.includes(search)){
-            return resource;
-          }
-          if ( resource.description.includes(search)){
-            return resource;
-          }
-          if ( resource.category.includes(search)) {
-            return resource;
-          }
-      }) 
+    if (search) {
+      const filteredResources = userResources.filter((resource) => {
+        if (resource.title.toLowerCase().includes(search.toLowerCase)) {
+          return resource;
+        }
+        if (resource.resource_url.includes(search)) {
+          return resource;
+        }
+        // if (resource.description.includes(search)) {
+        //   return resource;
+        // }
+        if (resource.category.includes(search)) {
+          return resource;
+        }
+      });
       return res.status(200).send(filteredResources);
-  }
-
+    }
 
     return res.status(200).send(userResources);
   },

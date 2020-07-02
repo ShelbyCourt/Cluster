@@ -1,0 +1,25 @@
+.rlcontainer {
+  background-image: -webkit-gradient(linear, left top, right top, from(#7ed957), to(#38b6ff));
+  background-image: linear-gradient(0.25turn, #7ed957, #38b6ff);
+  background-repeat: no-repeat;
+  padding-top: 5vh;
+}
+
+.rlcontainer input {
+  margin: 3vh;
+}
+
+.rlcontainer .resourcelist {
+  background-color: ghostwhite;
+  padding-top: 3vh;
+}
+
+.rlcontainer .resourcelist .listitems {
+  background-image: -webkit-gradient(linear, left top, right top, from(#38b6ff), to(#7ed957));
+  background-image: linear-gradient(0.25turn, #38b6ff, #7ed957);
+  width: 40vw;
+  padding: 2vh;
+  -webkit-box-shadow: 10px 15px 10px -6px rgba(39, 39, 39, 0.75);
+  box-shadow: 10px 15px 10px -6px rgba(29, 29, 29, 0.75);
+}
+/*# sourceMappingURL=ResourceListSass.css.map */
