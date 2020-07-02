@@ -1,6 +1,6 @@
 .Dash {
   background-color: black;
-  height: 100vh;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -23,6 +23,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: 5vh;
 }
 
 .Dash .Welcome h1 {
@@ -78,6 +79,7 @@
           align-items: center;
   -ms-flex-line-pack: distribute;
       align-content: space-around;
+  margin-bottom: 15vh;
 }
 
 .Dash .ResourceList h3 {

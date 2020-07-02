@@ -2,7 +2,7 @@
 
 .Dash {
   background-color:black; 
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   .TopDash {
@@ -10,6 +10,7 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    margin-top: 5vh;
   }
   .Welcome {
     h1 {
@@ -42,7 +43,8 @@
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    align-content: space-around;    
+    align-content: space-around;  
+    margin-bottom: 15vh;  
     h3 {
       font-size: 20;
     }

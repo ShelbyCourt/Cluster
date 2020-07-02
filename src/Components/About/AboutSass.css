@@ -37,4 +37,8 @@
 .About .Part1 p, .About .Part2 p {
   color: #38b6ff;
 }
+
+.About .Part1 .Clusters, .About .Part2 .Clusters {
+  color: #aba6fd;
+}
 /*# sourceMappingURL=AboutSass.css.map */

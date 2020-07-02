@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { updateResource } from "../../Redux/resourceReducer";
+import { getOneResource } from "../../Redux/resourceReducer";
 import { connect } from "react-redux";
 
 import "./ResourceInfo.css";
@@ -15,13 +16,52 @@ class ResourceInfo extends Component {
       notes: "",
       category: "",
       language: "",
+      resourceId: "",
     };
+  }
+
+  componentDidMount() {
+    this.getOneResource();
   }
 
   changeHandler = (e) => {
     this.setState({
       [e.target.name]: e.target.value,
     });
+  };
+
+  getOneResource = (e) => {
+    // e.preventDefault();
+    const {
+      title,
+      resource_url,
+      description,
+      notes,
+      category,
+      language,
+      resourceId,
+    } = this.state;
+    axios
+      .get("/api/oneresource", {
+        title,
+        resource_url,
+        description,
+        notes,
+        category,
+        language,
+        resourceId,
+      })
+      .then((res) => {
+        this.props.getOneResource(
+          res.data.title,
+          res.data.resource_url,
+          res.data.description,
+          res.data.notes,
+          res.data.category,
+          res.data.language,
+          res.data.resourceId
+        );
+      });
   };
 
   updateResource = (e) => {
@@ -34,7 +74,8 @@ class ResourceInfo extends Component {
       category,
       language,
     } = this.state;
-    axios.put("/api/resources", {
+    axios
+      .put("/api/resources", {
         title,
         resource_url,
         description,
@@ -69,7 +110,7 @@ class ResourceInfo extends Component {
         <h1>Resource Information</h1>
         <form className="ResInfo">
           <p>Title: </p>
-          <p> current title of resource</p>
+          {/* <p> current title of resource</p> */}
           <input
             type="text"
             placeholder="Title..."
@@ -133,6 +174,9 @@ class ResourceInfo extends Component {
   }
 }
 
-const mapDispatchToProps = { updateResource: updateResource };
+const mapDispatchToProps = {
+  updateResource: updateResource,
+  getOneResource: getOneResource,
+};
 
 export default connect(null, mapDispatchToProps)(ResourceInfo);

@@ -24,6 +24,9 @@
         p {
            color: $bluePrimary;
         }
+        .Clusters {
+            color: $purpleSecond;
+        }
     }
     .Part2 {
         @extend .Part1

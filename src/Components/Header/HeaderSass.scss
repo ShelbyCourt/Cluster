@@ -29,10 +29,11 @@
     margin-left: 0vw;
     h1 {
         display: inline;
-        padding: 10px;
-        margin: 5px;
+        padding: 12px;
+        margin: 8px;
         line-height: 1;
         font-size: 28px;
+        // background-color: black;
     }
     h1:hover {
         background-color: rgb(54, 54, 54);
@@ -53,11 +54,12 @@
 }
 
 .FAQ {
-    color: $greenPrimary;
+    color: rgb(54, 177, 54);
 }
 
 .Contact {
     color: $purplePrimary;
+    background-image: url("Pers-Proj.png");
 }
 
 .Logout {

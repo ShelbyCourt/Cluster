@@ -37,8 +37,8 @@
 
 .topnavleft h1 {
   display: inline;
-  padding: 10px;
-  margin: 5px;
+  padding: 12px;
+  margin: 8px;
   line-height: 1;
   font-size: 28px;
 }
@@ -61,11 +61,12 @@
 }
 
 .FAQ {
-  color: #7ed957;
+  color: #36b136;
 }
 
 .Contact {
   color: #a87dff;
+  background-image: url("Pers-Proj.png");
 }
 
 .Logout {

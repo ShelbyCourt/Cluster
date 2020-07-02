@@ -9,12 +9,12 @@ class About extends Component {
         <div className="Part1">
         <h1>What do we do?</h1>        
         <p>Clusteringly seeks to help you stay organized as you pursue the joy of learning languages by storing your collections of valuable resources in...</p>
-        <h1>Clusters</h1>
+        <h1 className="Clusters">Clusters</h1>
         </div>        
         <div className="Part2">
           <h1>Why do we do it?</h1>
           <br/>
-          <p>We believe that nothing should hamperyour learning enjoyment!</p>
+          <p>We believe that for collector's of knowledge nothing should hamper your learning enjoyment!</p>
         </div>
       </div>
     )

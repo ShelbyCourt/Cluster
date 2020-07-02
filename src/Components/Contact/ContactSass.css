@@ -21,7 +21,7 @@
   height: 100vh;
 }
 
-.AllContact .Contact {
+.AllContact .Contact1 {
   background-color: black;
   height: 25vh;
   width: 35vw;
@@ -30,11 +30,11 @@
   line-height: 1.5;
 }
 
-.AllContact .Contact h1 {
+.AllContact .Contact1 h1 {
   color: white;
 }
 
-.AllContact .Contact p {
+.AllContact .Contact1 p {
   color: #7ed957;
 }
 /*# sourceMappingURL=ContactSass.css.map */
