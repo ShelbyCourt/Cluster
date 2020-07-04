@@ -72,9 +72,14 @@ function ResourceList(props) {
             <>
             {userResources.map((element, index) => {
                 if (index < 15) {
+                  console.log('element = ' + JSON.stringify(element));
+                  console.log('element.id = ' + element.id);
                   return (
                     <div className="listitems">
+                    <Link to={`/resourceinfo/${element.id}`}>
                       <h3>{element.title}</h3>
+                      <p>{element.id}</p>
+                    </Link>
                       <p>{element.category}</p>
                       <a href={element.resource_url} target="_blank">Allez-y!</a> 
                     </div>

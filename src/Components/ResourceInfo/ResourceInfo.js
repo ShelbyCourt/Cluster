@@ -19,7 +19,7 @@ class ResourceInfo extends Component {
       resourceId: "",
     };
   }
-
+ 
   componentDidMount() {
     this.getOneResource();
   }
@@ -30,38 +30,26 @@ class ResourceInfo extends Component {
     });
   };
 
-  getOneResource = (e) => {
+  getOneResource = function() {
     // e.preventDefault();
-    const {
-      title,
-      resource_url,
-      description,
-      notes,
-      category,
-      language,
-      resourceId,
-    } = this.state;
-    axios
-      .get("/api/oneresource", {
-        title,
-        resource_url,
-        description,
-        notes,
-        category,
-        language,
-        resourceId,
-      })
+    const resourceId = this.props.match.params.id;
+    // const {title, resource_url, description, notes, category, language, resourceId} = this.state;
+    console.log('for axios, resourceId = ' + resourceId);
+    axios.get(`/api/oneresource?resourceId=${resourceId}`)
       .then((res) => {
-        this.props.getOneResource(
-          res.data.title,
-          res.data.resource_url,
-          res.data.description,
-          res.data.notes,
-          res.data.category,
-          res.data.language,
-          res.data.resourceId
-        );
-      });
+        console.log("res= " + JSON.stringify(res))
+        this.setState({ title: res.data.title, 
+          resource_url: res.data.resource_url,
+          description: res.data.description,
+          notes: res.data.notes,
+          category: res.data.category,
+          language: res.data.language          
+        });
+
+      }).catch((err) => {
+        console.log(err);
+      }
+      );
   };
 
   updateResource = (e) => {
@@ -111,6 +99,7 @@ class ResourceInfo extends Component {
         <form className="ResInfo">
           <p>Title: </p>
           {/* <p> current title of resource</p> */}
+          <p> Title = </p>
           <input
             type="text"
             placeholder="Title..."
@@ -175,8 +164,8 @@ class ResourceInfo extends Component {
 }
 
 const mapDispatchToProps = {
-  updateResource: updateResource,
-  getOneResource: getOneResource,
+  updateResource: updateResource
+  // getOneResource: getOneResource,
 };
 
 export default connect(null, mapDispatchToProps)(ResourceInfo);

@@ -18,7 +18,7 @@ export default (
         <Route exact path='/' component={Auth}/>
         <Route path='/register' component={Register}/>
         <Route path='/dashboard' component={Dashboard}/>
-        <Route path='/resourceinfo' component={ResourceInfo}/>
+        <Route exact path='/resourceinfo/:id' component={ResourceInfo}/>
         <Route path='/profile' component={Profile}/>
         <Route path='/about' component={About}/>
         <Route path='/FAQ' component={FAQ}/>

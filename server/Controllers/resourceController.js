@@ -20,7 +20,7 @@ module.exports = {
   getUserResources: async (req, res) => {
     db = req.app.get("db");
     const { userId } = req.session.user;
-    const { title, resource_url, category } = req.body;
+    const { title, resource_url, category, id } = req.body;
     const { search } = req.query;
 
     // console.log('category = ' + category)
@@ -58,8 +58,11 @@ module.exports = {
   getOneResource: async (req, res) => {
     db = req.app.get("db");
     const { resourceId } = req.query;
+    console.log(`resourceId = ${resourceId}`)
 
     const oneResource = await db.get_one_resource(resourceId);
+
+    //console.log(`oneResource = ${oneResource}`)
     return res.status(200).send(oneResource);
   },
 

@@ -40,19 +40,19 @@ export function updateResource (id, title, resourceUrl, description, category) {
     }
 }
 
-export function getOneResource (id, title, resourceUrl, description, category) {
-    const resource = axios.get('/api/oneresource')
-    return {
-        type: GET_ONE_RESOURCE,
-        payload: {
-            id: id,
-            title: title,
-            resourceUrl: resourceUrl,
-            description: description,
-            category: category
-        }
-    }
-}
+// export function getOneResource (id, title, resourceUrl, description, category) {
+//     const resource = axios.get('/api/oneresource')
+//     return {
+//         type: GET_ONE_RESOURCE,
+//         payload: {
+//             id: id,
+//             title: title,
+//             resourceUrl: resourceUrl,
+//             description: description,
+//             category: category
+//         }
+//     }
+// }
 
 
 
