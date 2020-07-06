@@ -24,25 +24,28 @@
       -ms-flex-align: center;
           align-items: center;
   margin-top: 5vh;
+  background-image: url("Cluster-Banner-Wide.png");
 }
 
-.Dash .Welcome h1 {
-  font-weight: 600;
+.Dash .TopDash .Welcome h1 {
+  font-weight: 400;
+  font-size: 55px;
   line-height: 1;
   color: white;
+  text-shadow: 3px 3px 5px rgba(255, 255, 255, 0.7);
 }
 
-.Dash .Welcome p {
+.Dash .TopDash .Welcome p {
   font-size: 18px;
   line-height: 1;
   color: white;
 }
 
-.Dash .Welcome p:hover {
+.Dash .TopDash .Welcome p:hover {
   color: #7ed957;
 }
 
-.Dash .addResource button {
+.Dash .TopDash .addResource button {
   margin: 10px;
   margin-bottom: 10px;
   padding-left: 20px;
@@ -56,7 +59,7 @@
   color: black;
 }
 
-.Dash .addResource button:hover {
+.Dash .TopDash .addResource button:hover {
   color: #a87dff;
   background-color: black;
   font-weight: 600;
@@ -106,6 +109,7 @@
   padding: 3vh;
   margin-top: 10px;
   margin-bottom: 10px;
+  border-radius: 1px 65px;
 }
 
 .Dash .ResourceList .Verbs {
@@ -114,6 +118,7 @@
   padding: 3vh;
   margin-top: 10px;
   margin-bottom: 10px;
+  border-radius: 1px 65px;
 }
 
 .Dash .ResourceList .Adjectives {
@@ -122,6 +127,7 @@
   padding: 3vh;
   margin-top: 10px;
   margin-bottom: 10px;
+  border-radius: 1px 65px;
 }
 
 .Dash .ResourceList .Adverbs {
@@ -130,6 +136,7 @@
   padding: 3vh;
   margin-top: 10px;
   margin-bottom: 10px;
+  border-radius: 1px 65px;
 }
 
 .Dash .ResourceList .Pronunciation {
@@ -138,6 +145,7 @@
   padding: 3vh;
   margin-top: 10px;
   margin-bottom: 10px;
+  border-radius: 1px 65px;
 }
 
 .Dash .ResourceList .PodVid {
@@ -146,6 +154,7 @@
   padding: 3vh;
   margin-top: 10px;
   margin-bottom: 10px;
+  border-radius: 1px 65px;
 }
 
 .Dash .ResourceList .Misc {
@@ -154,6 +163,7 @@
   padding: 3vh;
   margin-top: 10px;
   margin-bottom: 10px;
+  border-radius: 1px 65px;
 }
 
 @media screen and (max-width: 450px) {

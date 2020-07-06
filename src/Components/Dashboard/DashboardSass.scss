@@ -1,7 +1,7 @@
 @import "../../variables.scss";
 
 .Dash {
-  background-color:black; 
+  background-color: black;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -11,30 +11,34 @@
     justify-content: space-around;
     align-items: center;
     margin-top: 5vh;
-  }
-  .Welcome {
-    h1 {
-      font-weight: 600;
-      line-height: 1;
-      color: white;
-    }
-    p {
-      font-size: 18px;
-      line-height: 1;
-      color: white;
-      &:hover {
-        color: $greenPrimary;
+    background-image: url("Cluster-Banner-Wide.png");
+    .Welcome {
+      h1 {
+        font-weight: 400;
+        font-size: 55px;
+        line-height: 1;
+        color: white;
+        text-shadow: 3px 3px 5px rgba(255,255,255,0.7);
+        // text-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(107, 107, 107, 0.15);
+      }
+      p {
+        font-size: 18px;
+        line-height: 1;
+        color: white;
+        &:hover {
+          color: $greenPrimary;
+        }
       }
     }
-  }
-  .addResource button {
-    @include mainBtn;
-    background-color: $purpleSecond;
-    color: black;
-    &:hover {
-      color: $purplePrimary;
-      background-color: black;
-      font-weight: 600;
+    .addResource button {
+      @include mainBtn;
+      background-color: $purpleSecond;
+      color: black;
+      &:hover {
+        color: $purplePrimary;
+        background-color: black;
+        font-weight: 600;
+      }
     }
   }
   .ResourceList {
@@ -43,8 +47,8 @@
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    align-content: space-around;  
-    margin-bottom: 15vh;  
+    align-content: space-around;
+    margin-bottom: 15vh;
     h3 {
       font-size: 20;
     }
@@ -88,7 +92,7 @@
     width: 100vw;
     margin-top: 5vh;
     .TopDash .Welcome h1 {
-        font-size: 22px;
+      font-size: 22px;
     }
     .ResourceList {
       h2 {
@@ -103,15 +107,14 @@
 }
 
 @media screen and (max-width: 950px) {
-    .Dash {
-      width: 100vw;
-      margin-top: 5vh;
-      .ResourceList {
-        h2 {
-          font-size: 22px;
-          word-wrap: break-word;
-        }
+  .Dash {
+    width: 100vw;
+    margin-top: 5vh;
+    .ResourceList {
+      h2 {
+        font-size: 22px;
+        word-wrap: break-word;
       }
     }
   }
-  
+}

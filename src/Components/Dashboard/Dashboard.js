@@ -35,6 +35,9 @@ function Dashboard(props) {
           <Link to="/resourcelist">
             <p>VIEW ALL RESOURCES</p>
           </Link>
+          <Link to="/Downloads">
+            <p>VIEW DOWNLOADABLE CONTENT</p>
+          </Link>
         </div>
         <div className="addResource">
           <Link to="/AddResource">

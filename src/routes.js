@@ -12,6 +12,7 @@ import FAQ from './Components/FAQ/FAQ';
 import Contact from './Components/Contact/Contact';
 import AddResource from './Components/AddResource/AddResource';
 import ResourceList from './Components/ResourceList/ResourceList';
+import Downloads from './Components/Downloads/Downloads';
 
 export default (
     <Switch>
@@ -25,5 +26,6 @@ export default (
         <Route path='/Contact' component={Contact}/>
         <Route path='/AddResource' component={AddResource}/>
         <Route path='/resourcelist' component={ResourceList}/>
+        <Route path='/Downloads' component={Downloads}/>
     </Switch>
 )

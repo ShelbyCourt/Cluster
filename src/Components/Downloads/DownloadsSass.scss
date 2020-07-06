@@ -1,0 +1,14 @@
+@import "../../variables.scss";
+
+.DLBody {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: stretch;
+  .containerDL {
+    flex-direction: column;
+    @include mainBox;
+  }
+}

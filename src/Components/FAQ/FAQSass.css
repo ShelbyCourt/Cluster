@@ -28,6 +28,8 @@
   margin: 20px;
   padding: 10px;
   line-height: 1.5;
+  -webkit-box-shadow: 20px 21px 24px -5px rgba(23, 23, 23, 0.83);
+  box-shadow: 20px 21px 24px -5px rgba(23, 23, 23, 0.83);
 }
 
 .FAQ .Who1 h1, .FAQ .Who2 h1 {
