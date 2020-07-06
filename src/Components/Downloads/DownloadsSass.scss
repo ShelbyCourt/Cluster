@@ -6,9 +6,19 @@
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
-  align-content: stretch;
+  align-content: space-around;
   .containerDL {
     flex-direction: column;
     @include mainBox;
+    ul {
+      display: flex;
+      flex-direction: column;
+      li {
+        font-family: $SecFont;
+        line-height: 2;
+        margin-right: auto;
+      // line-height: 1.25;
+      }
+    }
   }
 }
