@@ -71,6 +71,7 @@ module.exports = {
     const { title, resource_url, description, notes, category } = req.body;
     const { resourceId } = req.query;
 
+    console.log("axios pulled out of request: title = " + title);
     const updatedResource = await db.update_resource(
       title,
       resource_url,

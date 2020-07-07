@@ -54,8 +54,6 @@ export function updateResource (id, title, resourceUrl, description, category) {
 //     }
 // }
 
-
-
 export default function reducer ( state = initialState, action) {
     switch (action.type) {
         case ADD_RESOURCE:

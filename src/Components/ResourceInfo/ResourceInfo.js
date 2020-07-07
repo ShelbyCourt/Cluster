@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
-import { updateResource } from "../../Redux/resourceReducer";
-import { getOneResource } from "../../Redux/resourceReducer";
-import { connect } from "react-redux";
+// import { updateResource } from "../../Redux/resourceReducer";
+// import { getOneResource } from "../../Redux/resourceReducer";
+// import { connect } from "react-redux";
 
 import "./ResourceInfo.css";
 
@@ -18,6 +18,7 @@ class ResourceInfo extends Component {
       language: "",
       resourceId: "",
     };
+    this.getOneResource.bind(this);
   }
  
   componentDidMount() {
@@ -38,21 +39,24 @@ class ResourceInfo extends Component {
     axios.get(`/api/oneresource?resourceId=${resourceId}`)
       .then((res) => {
         console.log("res= " + JSON.stringify(res))
-        this.setState({ title: res.data.title, 
-          resource_url: res.data.resource_url,
-          description: res.data.description,
-          notes: res.data.notes,
-          category: res.data.category,
-          language: res.data.language          
-        });
+        console.log('we think title = ' + res.data.title);
+        console.log('we think title corrected = ' + res.data[0].title);
+        const fetchedResource = res.data[0];
 
-      }).catch((err) => {
-        console.log(err);
-      }
-      );
+        this.setState({ title: fetchedResource.title, 
+          resource_url: fetchedResource.resource_url,
+          description: fetchedResource.description,
+          notes: fetchedResource.notes,
+          category: fetchedResource.category,
+          language: fetchedResource.language
+        });
+      })
+      .catch((err) => {
+        console.log(err)});
   };
 
   updateResource = (e) => {
+    const resourceId = this.props.match.params.id;
     e.preventDefault();
     const {
       title,
@@ -62,26 +66,31 @@ class ResourceInfo extends Component {
       category,
       language,
     } = this.state;
+    // axios pulls out of request:
+    // title, resource_url, description, notes, category
     axios
-      .put("/api/resources", {
+      .put(`/api/resources?resourceId=${resourceId}`, {
         title,
         resource_url,
         description,
         notes,
-        category,
-        language,
+        category
+        // language,
       })
       .then((res) => {
-        this.props.updateResource(
-          res.data.title,
-          res.data.resource_url,
-          res.data.description,
-          res.data.notes,
-          res.data.category,
-          res.data.language,
-          res.data.resourceId
-        );
-      });
+        console.log('update resource successful')
+        alert("update successful");
+        // this.props.updateResource(
+        //   res.data.title,
+        //   res.data.resource_url,
+        //   res.data.description,
+        //   res.data.notes,
+        //   res.data.category,
+        //   // res.data.language,
+        //   res.data.resourceId
+        // );
+      }).catch((err) => {
+        console.log(err)});
   };
 
   render() {
@@ -97,7 +106,7 @@ class ResourceInfo extends Component {
       <div className="container">
         <h1>Resource Information</h1>
         <form className="ResInfo">
-          <p>Title: </p>
+          <p>Title: {this.props.title} </p>
           {/* <p> current title of resource</p> */}
           <p> Title = </p>
           <input
@@ -144,7 +153,7 @@ class ResourceInfo extends Component {
             onChange={(e) => this.changeHandler(e)}
           />
           <br />
-          <p>Language: </p>
+          {/* <p>Language: </p>
           <input
             type="text"
             placeholder="Language..."
@@ -152,10 +161,10 @@ class ResourceInfo extends Component {
             value={language}
             onChange={(e) => this.changeHandler(e)}
           />
-          <br />
+          <br /> */}
           <div className="bottomBtns">
             <button onClick={this.deleteResource}>DELETE</button>
-            <button onClick={this.addResource}>SAVE</button>
+            <button onClick={this.updateResource}>SAVE</button>
           </div>
         </form>
       </div>
@@ -163,9 +172,11 @@ class ResourceInfo extends Component {
   }
 }
 
-const mapDispatchToProps = {
-  updateResource: updateResource
-  // getOneResource: getOneResource,
-};
+// const mapDispatchToProps = {
+//   // updateResource: updateResource
+//   // getOneResource: getOneResource,
+// };
 
-export default connect(null, mapDispatchToProps)(ResourceInfo);
+// export default connect(null, mapDispatchToProps)(ResourceInfo);
+
+export default ResourceInfo;

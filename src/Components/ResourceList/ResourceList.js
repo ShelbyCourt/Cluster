@@ -71,7 +71,7 @@ function ResourceList(props) {
           <div className="resourcelist">
             <>
             {userResources.map((element, index) => {
-                if (index < 15) {
+                if (index < 35) {
                   console.log('element = ' + JSON.stringify(element));
                   console.log('element.id = ' + element.id);
                   return (
