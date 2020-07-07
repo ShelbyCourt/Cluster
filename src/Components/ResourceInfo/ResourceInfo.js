@@ -93,7 +93,13 @@ class ResourceInfo extends Component {
         //   // res.data.language,
         //   res.data.resourceId
         // );
-        this.setState({title: '', resource_url: '', description: '', category: '', notes: ''});
+        this.setState({
+          title: "",
+          resource_url: "",
+          description: "",
+          category: "",
+          notes: "",
+        });
       })
       .catch((err) => {
         console.log(err);
@@ -103,7 +109,8 @@ class ResourceInfo extends Component {
   deleteResource = (e) => {
     e.preventDefault();
     const resourceId = this.props.match.params.id;
-    axios.delete(`/api/resources?resourceId=${resourceId}`)
+    axios
+      .delete(`/api/resources?resourceId=${resourceId}`)
       .then((res) => {
         alert("Resource DELETED");
       })
@@ -128,8 +135,11 @@ class ResourceInfo extends Component {
           <p>RETURN TO ALL RESOURCES</p>
         </Link>
         <form className="ResInfo">
+          <h2>Type in the fields to update/edit your Resource Information</h2>
           <p>Title: {this.props.title} </p>
-          <input
+          <textarea
+            rows="1"
+            cols="55"
             type="text"
             placeholder="Title..."
             name="title"
@@ -138,7 +148,9 @@ class ResourceInfo extends Component {
           />
           <br />
           <p>URL: </p>
-          <input
+          <textarea
+            rows="3"
+            cols="55"
             type="text"
             placeholder="Resource url..."
             name="resource_url"
@@ -147,7 +159,9 @@ class ResourceInfo extends Component {
           />
           <br />
           <p>Description: </p>
-          <input
+          <textarea
+            rows="5"
+            cols="55"
             type="text"
             placeholder="Description..."
             name="description"
@@ -156,7 +170,9 @@ class ResourceInfo extends Component {
           />
           <br />
           <p>Notes: </p>
-          <input
+          <textarea
+            rows="5"
+            cols="55"
             type="text"
             placeholder="Anything you want to remember!"
             name="notes"
@@ -165,7 +181,9 @@ class ResourceInfo extends Component {
           />
           <br />
           <p>Category: </p>
-          <input
+          <textarea
+            rows="1"
+            cols="55"
             type="text"
             placeholder="Category..."
             name="category"
@@ -184,7 +202,8 @@ class ResourceInfo extends Component {
           <br /> */}
           <div className="bottomBtns">
             <button onClick={this.deleteResource}>DELETE</button>
-            <button onClick={this.updateResource}>SAVE</button>
+            <div className="divider"/>
+            <button onClick={this.updateResource}>SAVE/UPDATE</button>
           </div>
         </form>
       </div>

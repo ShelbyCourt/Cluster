@@ -27,6 +27,7 @@
   width: 35vw;
   margin: 20px;
   padding: 10px;
+  overflow: hidden;
   line-height: 1.5;
   -webkit-box-shadow: 26px 28px 24px -5px rgba(53, 53, 53, 0.83);
   box-shadow: 26px 28px 24px -5px rgba(53, 53, 53, 0.83);

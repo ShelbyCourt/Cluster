@@ -81,7 +81,7 @@ function ResourceList(props) {
                       {/* <p>{element.id}</p> */}
                     </Link>
                       <p>{element.category}</p>
-                      <a href={element.resource_url} target="_blank">Allez-y!</a> 
+                      <a href={element.resource_url} target="_blank">ALLEZ-Y!</a> 
                     </div>
                   );
                 }

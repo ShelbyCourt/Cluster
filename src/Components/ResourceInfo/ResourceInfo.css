@@ -15,16 +15,25 @@
   line-height: 1;
 }
 
+.container h1 {
+  font-size: 48px;
+  color: ghostwhite;
+}
+
 .container .ResInfo {
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-image: linear-gradient(0.45turn, #38b6ff, #FF70A6);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -34,8 +43,8 @@
   justify-content: center;
   padding: 15px;
   padding-bottom: 25px;
-  -webkit-box-shadow: 10px 15px 10px -6px rgba(0, 0, 0, 0.75);
-  box-shadow: 10px 15px 10px -6px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 21px 21px 24px -5px rgba(66, 66, 66, 0.83);
+  box-shadow: 21px 21px 24px -5px rgba(23, 23, 23, 0.83);
   background-color: ghostwhite;
   width: 30vw;
   margin-top: 3%;
@@ -44,32 +53,50 @@
   height: 75vh;
 }
 
-.container .ResInfo input {
-  margin: 20px;
-  line-height: 1;
+.container .ResInfo h2 {
+  width: 75%;
+  color: black;
+}
+
+.container .ResInfo textarea {
+  line-height: 1.15;
+  font-family: "Raleway";
+  font-size: 16px;
+  padding: 15px;
+  font-weight: 600;
+  color: #5c5c5c;
+  word-wrap: normal;
+}
+
+.container .ResInfo .bottomBtns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .container .ResInfo .bottomBtns button {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  margin: 5px;
-  margin-bottom: 5px;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  margin: 35px;
+  font-weight: 600;
+  margin: 10px;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   font-family: 'Cinzel', serif;
-  font-size: 18px;
-  border-radius: 14px;
+  font-size: 25px;
+  border-radius: 12px;
 }
 
 .container .ResInfo .bottomBtns button:hover {
-  color: #38b6ff;
-  background-color: black;
-  font-weight: 600;
+  color: ghostwhite;
+  background-color: #7ccfff;
+  font-weight: 400;
+}
+
+.container .ResInfo .bottomBtns .divider {
+  width: 85px;
+  height: 5vw;
+  display: inline-block;
 }
 /*# sourceMappingURL=ResourceInfo.css.map */

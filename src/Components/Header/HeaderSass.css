@@ -20,8 +20,8 @@
 }
 
 .header .Name h1 {
-  font-size: 65px;
-  line-height: .5;
+  font-size: 70px;
+  line-height: 0.5;
   color: #a87dff;
 }
 
@@ -40,7 +40,7 @@
   padding: 12px;
   margin: 8px;
   line-height: 1;
-  font-size: 28px;
+  font-size: 22px;
 }
 
 .topnavleft h1:hover {

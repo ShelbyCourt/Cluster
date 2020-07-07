@@ -7,14 +7,15 @@
   padding-top: 3vh;
   h1 {
   color: white;
-  font-size: 32px;
+  font-size: 48px;
   }  
   input {
     margin: 3vh;
     padding: .5%;
+    width: 15vw;
   }
   button {
-    @include smallBtn;
+    @include mainBtn;
     &:hover {
       background-color: $greenSecond;
     }
@@ -47,9 +48,11 @@
           border-radius: 12px;
           padding-bottom: 0.5vh;
           padding-top: 0.5vh;
+          color: black;
         }
         p {
-          font-size: 16px;
+          font-size: 18px;
+          color: black;
         }
     }
   }

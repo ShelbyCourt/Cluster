@@ -16,6 +16,7 @@
           align-items: center;
   -ms-flex-line-pack: distribute;
       align-content: space-around;
+  color: #38b6ff;
 }
 
 .DLBody .containerDL {
@@ -39,6 +40,10 @@
   margin-top: 3%;
 }
 
+.DLBody .containerDL h1 {
+  font-size: 48px;
+}
+
 .DLBody .containerDL ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -53,5 +58,9 @@
   font-family: "Raleway";
   line-height: 2;
   margin-right: auto;
+}
+
+.DLBody .containerDL ul li a {
+  font-size: 20px;
 }
 /*# sourceMappingURL=DownloadsSass.css.map */

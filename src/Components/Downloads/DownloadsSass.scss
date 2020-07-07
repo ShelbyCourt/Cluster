@@ -7,17 +7,23 @@
   justify-content: center;
   align-items: center;
   align-content: space-around;
+  color: $bluePrimary;
   .containerDL {
     flex-direction: column;
     @include mainBox;
+    h1 {
+      font-size: 48px;
+    }
     ul {
       display: flex;
-      flex-direction: column;
+      flex-direction: column;      
       li {
         font-family: $SecFont;
         line-height: 2;
-        margin-right: auto;
-      // line-height: 1.25;
+        margin-right: auto;                
+        a {
+          font-size: 20px;
+        }
       }
     }
   }

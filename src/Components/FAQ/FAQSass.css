@@ -8,8 +8,8 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -23,10 +23,11 @@
 
 .FAQ .Who1, .FAQ .Who2 {
   background-color: black;
-  height: 25vh;
-  width: 35vw;
+  height: 35vh;
+  width: 40vw;
   margin: 20px;
-  padding: 10px;
+  padding: 45px;
+  overflow: hidden;
   line-height: 1.5;
   -webkit-box-shadow: 20px 21px 24px -5px rgba(23, 23, 23, 0.83);
   box-shadow: 20px 21px 24px -5px rgba(23, 23, 23, 0.83);
@@ -38,5 +39,19 @@
 
 .FAQ .Who1 p, .FAQ .Who2 p {
   color: #FF70A6;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+}
+
+@media screen and (max-width: 450px) {
+  .FAQ {
+    word-break: break-all;
+  }
+  .FAQ .Who1, .FAQ .Who2 {
+    width: 90vw;
+  }
+  .FAQ .Who1 p, .FAQ .Who2 p {
+    font-size: 12;
+  }
 }
 /*# sourceMappingURL=FAQSass.css.map */

@@ -6,17 +6,18 @@
   background-position: 0% 0%;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: center;
   align-content: space-around;
   height: 100vh;
   .Who1 {
     background-color: black;
-    height: 25vh;
-    width: 35vw;
+    height: 35vh;
+    width: 40vw;
     margin: 20px;
-    padding: 10px;
+    padding: 45px;
+    overflow: hidden;
     line-height: 1.5;
     -webkit-box-shadow: 20px 21px 24px -5px rgba(23, 23, 23, 0.83);
     -moz-box-shadow: 20px 21px 24px -5px rgba(23, 23, 23, 0.83);
@@ -26,9 +27,23 @@
     }
     p {
       color: $pinkPrimary;
+      align-content: space-around;
     }
   }
   .Who2 {
     @extend .Who1;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .FAQ {
+    word-break: break-all;
+    .Who1 {
+      width: 90vw;
+
+      p {
+        font-size: 12;
+      }
+    }
   }
 }
