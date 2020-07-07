@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 // import { updateResource } from "../../Redux/resourceReducer";
 // import { getOneResource } from "../../Redux/resourceReducer";
 // import { connect } from "react-redux";
@@ -20,7 +21,7 @@ class ResourceInfo extends Component {
     };
     this.getOneResource.bind(this);
   }
- 
+
   componentDidMount() {
     this.getOneResource();
   }
@@ -31,28 +32,31 @@ class ResourceInfo extends Component {
     });
   };
 
-  getOneResource = function() {
+  getOneResource = function () {
     // e.preventDefault();
     const resourceId = this.props.match.params.id;
     // const {title, resource_url, description, notes, category, language, resourceId} = this.state;
-    console.log('for axios, resourceId = ' + resourceId);
-    axios.get(`/api/oneresource?resourceId=${resourceId}`)
+    console.log("for axios, resourceId = " + resourceId);
+    axios
+      .get(`/api/oneresource?resourceId=${resourceId}`)
       .then((res) => {
-        console.log("res= " + JSON.stringify(res))
-        console.log('we think title = ' + res.data.title);
-        console.log('we think title corrected = ' + res.data[0].title);
+        console.log("res= " + JSON.stringify(res));
+        console.log("we think title = " + res.data.title);
+        console.log("we think title corrected = " + res.data[0].title);
         const fetchedResource = res.data[0];
 
-        this.setState({ title: fetchedResource.title, 
+        this.setState({
+          title: fetchedResource.title,
           resource_url: fetchedResource.resource_url,
           description: fetchedResource.description,
           notes: fetchedResource.notes,
           category: fetchedResource.category,
-          language: fetchedResource.language
+          language: fetchedResource.language,
         });
       })
       .catch((err) => {
-        console.log(err)});
+        console.log(err);
+      });
   };
 
   updateResource = (e) => {
@@ -74,11 +78,11 @@ class ResourceInfo extends Component {
         resource_url,
         description,
         notes,
-        category
+        category,
         // language,
       })
       .then((res) => {
-        console.log('update resource successful')
+        console.log("update resource successful");
         alert("update successful");
         // this.props.updateResource(
         //   res.data.title,
@@ -89,8 +93,23 @@ class ResourceInfo extends Component {
         //   // res.data.language,
         //   res.data.resourceId
         // );
-      }).catch((err) => {
-        console.log(err)});
+        this.setState({title: '', resource_url: '', description: '', category: '', notes: ''});
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
+  deleteResource = (e) => {
+    e.preventDefault();
+    const resourceId = this.props.match.params.id;
+    axios.delete(`/api/resources?resourceId=${resourceId}`)
+      .then((res) => {
+        alert("Resource DELETED");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
   render() {
@@ -105,10 +124,11 @@ class ResourceInfo extends Component {
     return (
       <div className="container">
         <h1>Resource Information</h1>
+        <Link to="/resourcelist">
+          <p>RETURN TO ALL RESOURCES</p>
+        </Link>
         <form className="ResInfo">
           <p>Title: {this.props.title} </p>
-          {/* <p> current title of resource</p> */}
-          <p> Title = </p>
           <input
             type="text"
             placeholder="Title..."

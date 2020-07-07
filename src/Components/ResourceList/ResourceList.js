@@ -71,14 +71,14 @@ function ResourceList(props) {
           <div className="resourcelist">
             <>
             {userResources.map((element, index) => {
-                if (index < 35) {
+                if (index < 55) {
                   console.log('element = ' + JSON.stringify(element));
                   console.log('element.id = ' + element.id);
                   return (
                     <div className="listitems">
                     <Link to={`/resourceinfo/${element.id}`}>
                       <h3>{element.title}</h3>
-                      <p>{element.id}</p>
+                      {/* <p>{element.id}</p> */}
                     </Link>
                       <p>{element.category}</p>
                       <a href={element.resource_url} target="_blank">Allez-y!</a> 
