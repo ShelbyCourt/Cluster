@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import { updateUser } from "../../Redux/userReducer";
 import { connect } from "react-redux";
@@ -6,45 +6,50 @@ import { connect } from "react-redux";
 // import "./Register.css";
 import "./RegisterSass.css";
 
-class Register extends Component {
-  constructor() {
-    super();
-    this.state = {
-      username: "",
-      email: "",
-      password: "",
-    };
-  }
+function Register (props) {
+  // constructor() {
+  //   super();
+  //   this.state = {
+  //     username: "",
+  //     email: "",
+  //     password: "",
+  //   };
+  // }
 
-  changeHandler = (e) => {
-    this.setState({
-      [e.target.name]: e.target.value,
-    });
-  };
+  const [username, setUsername] = useState('')
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
 
-  register = (e) => {
+
+  // const changeHandler = (e) => {
+  //   this.setState({
+  //     [e.target.name]: e.target.value,
+  //   });
+  // };
+
+  const register = (e) => {
     e.preventDefault();
-    const { username, email, password } = this.state;
+    // const { username, email, password } = this.state;
     axios
       .post("/auth/register", { username, email, password })
       .then((res) => {
         console.log(
           "Axios returned from register res.data: " + JSON.stringify(res.data)
         );
-        this.props.updateUser(
+        props.updateUser(
           res.data.userId,
           res.data.username,
           res.data.email
         );
-        this.props.history.push("/dashboard");
+        props.history.push("/dashboard");
       })
       .catch((err) => {
         alert("Could not register");
       });
   };
 
-  render() {
-    const { username, email, password } = this.state;
+  // render() {
+  //   const { username, email, password } = this.state;
     return (
       <div className="containerReg">
         <div className="Register">
@@ -56,7 +61,7 @@ class Register extends Component {
               placeholder="username..."
               name="username"
               value={username}
-              onChange={(e) => this.changeHandler(e)}
+              onChange={(e) => setUsername(e.target.value)}
             />
             <br />
             <p>Email: </p>
@@ -65,7 +70,7 @@ class Register extends Component {
               placeholder="email..."
               name="email"
               value={email}
-              onChange={(e) => this.changeHandler(e)}
+              onChange={(e) => setEmail(e.target.value)}
             />
             <br />
             <p>Password: </p>
@@ -74,16 +79,16 @@ class Register extends Component {
               placeholder="password..."
               name="password"
               value={password}
-              onChange={(e) => this.changeHandler(e)}
+              onChange={(e) => setPassword(e.target.value)}
             />
             <br />
 
-            <button onClick={this.register}>Register</button>
+            <button onClick={register}>Register</button>
           </div>
         </div>
       </div>
     );
-  }
+ 
 }
 
 const mapDispatchToProps = { updateUser: updateUser };

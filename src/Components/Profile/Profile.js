@@ -1,53 +1,55 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 
 import "./ProfileSass.css";
 
-class Profile extends Component {
-  constructor() {
-    super();
-    this.state = {
-      username: "",
-      email: "",
-      languages: "",
-      profile_pic: "",
-    };
-  }
+function Profile () {
+  // constructor() {
+  //   super();
+  //   this.state = {
+  //     username: "",
+  //     email: "",
+  //     languages: "",
+  //     profile_pic: "",
+  //   };
+  // }
 
-  changeHandler = (e) => {
+
+const [username, setUsername] = useState ('')
+// const [email, setEmail] = useState ('')
+// const [languages, setLanguages] = useState ('')
+// const [profile_pic, setProfile_pic] = useState ('')
+
+
+  const changeHandler = (e) => {
     this.setState({
       [e.target.name]: e.target.value,
     });
   };
 
-  render() {
-    
     return (
       <div className="ProfileDiv">
         <div className="containerP">
-          <h1>X</h1>
-          <p>doiejf</p>
-          <p>Profile Picture</p>
-          <input
+          <h1>Profile</h1>          
+          {/* <input
             type="file"
             accept="image/*"
             multiple="false"
             placeholder="Upload image..."
-          ></input>
+          ></input> */}
           {/* <div className="updateProfBtn"> */}
 
           {/* </div> */}
         </div>
         <div className="ProfInfo">
-          <p>Email</p>
-          <input type="text" placeholder="Email..."></input>
-          <p>Languages</p>
-          <input type="text" placeholder="Languages..."></input>
+          <p>Username</p>
+          <input onChange {(e) => setUsername(e.target.value)} type="text" placeholder="Username..."></input>
+          {/* <p>Languages</p>
+          <input type="text" placeholder="Languages..."></input> */}
           <br/>
           <button onClick={this.addResource}>UPDATE</button>
         </div>
       </div>
     );
-  }
 }
 
 export default Profile;
