@@ -1,5 +1,11 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+PROJECT DESCRIPTION:
+Project is design to help language learners (specifically French learners) to better organize their online resources into different category clusters. Users can save links to resource web pages by specific categories, add a description and add any notes about the resource. All resources are searchable, editable and deletable. There are also a few document resources that learners can download from Amazon S3.
+
+
+
+
 ## Available Scripts
 
 In the project directory, you can run:
